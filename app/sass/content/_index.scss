@@ -10,39 +10,48 @@
 			display: block;
 			position: relative;
 			margin: 50px auto;
-			width: 80%;
+			width: 100%;
 			height: 300px;
 			h2 {
 				position: absolute;
-				top: 50%;
-				/* -webkit-transform: translate(-50%, -50%);
-				   -moz-transform: translate(-50%, -50%);
-				    -ms-transform: translate(-50%, -50%);
-				     -o-transform: translate(-50%, -50%);
-				        transform: translate(-50%, -50%); */
+				-webkit-transform: translate(65%, 65%);
+				   -moz-transform: translate(65%, 65%);
+				    -ms-transform: translate(65%, 65%);
+				     -o-transform: translate(65%, 65%);
+				        transform: translate(65%, 65%);
 				margin: 0;
 				z-index: 9999;
 				font-family: $bl;
 				text: #f6fdfd center 100px;
 				@include text-shadow(5px 9px 7px rgba(0,0,0,.35));
-				width: 80%;
+				/* width: 60%; */
+				/* top: 50%;
+				left: 50%; */
  			}
 		}
 		&_interface {
 			position: absolute;
-			width: 80%;
-			/* top: -50%;	 */		
+			width: 90%;
+			-webkit-transform: translate(10%, -20%);
+			   -moz-transform: translate(10%, -20%);
+			    -ms-transform: translate(10%, -20%);
+			     -o-transform: translate(10%, -20%);
+			        transform: translate(10%, -20%);
+			z-index: 2;
 		}
 		&_rectangle {
-			float: left;
+			display: block;
 			position: relative;
-			width: 100%;
+			margin: 0 auto;
+			width: 80%;
 			height: 270px;
 			-webkit-box-sizing: border-box;
 			   -moz-box-sizing: border-box;
 			        box-sizing: border-box;
 			border: 20px solid #fff;
 			@include box-shadow(5px 9px 7px rgba(0,0,0,.35));
+			
+			z-index: 1;
 			&:after {
 				content: "";
 				position: absolute;
@@ -51,7 +60,70 @@
 				height: 20px;
 				background-color: #FFF;
 				bottom: -20px;
+				left: 0;				
 			}
+		}
+		&_btn {
+			color: #fff;
+			cursor: pointer;
+			display: block;
+			font-size:12px;
+			text-align: center;
+			font-weight: 400;
+			line-height: 40px;
+			float: right;
+			margin-right: 10%;
+			max-width: 250px;
+			padding: 0 50px 0;
+			position: relative;
+			text-decoration: none;
+			font-family: $m;
+			text-transform: uppercase;
+			vertical-align: middle;
+			width: 100%; 
+			z-index: 99;
+			svg {
+				height: 45px;
+				left: 0;
+				position: absolute;
+				top: 0; 
+				width: 100%; 
+			}
+
+			rect {
+				fill: none;
+				stroke: #fff;
+				stroke-width: 5;
+				stroke-dasharray: 650, 50;
+			}
+			&:hover {
+				font-family: $b;
+				letter-spacing: 1px;
+				text-decoration: none;
+				color: #FFF;
+				rect {
+					stroke-width: 5;
+					stroke-dasharray: 50, 350;
+					stroke-dashoffset: 48;
+					transition: all 1.35s cubic-bezier(0.19, 1, 0.2, 1);
+				}
+			}
+		}
+		&_desc {
+			font-family: $b;
+			color: #676363;
+			font-size: 14px;
+			letter-spacing: 4px;
+			word-spacing: 20px;
+			position: absolute;
+			right: -70px;
+			top: 45px;
+			margin: 0;
+			-webkit-transform: rotate(90deg);
+			   -moz-transform: rotate(90deg);
+			    -ms-transform: rotate(90deg);
+			     -o-transform: rotate(90deg);
+			        transform: rotate(90deg);
 		}
 	}
 	&__partners {
@@ -59,8 +131,67 @@
 		background-repeat: no-repeat;
 		border-right-width: 100%;
 		background-position: 50% -30%;
-
-
+		-ms-overflow-x: hidden;
+		    overflow-x: hidden;
+		.fp-tableCell {
+			display: block;
+			float: left;
+			width: 100%;
+		}
+		h2 {
+			text: #251c1d uppercase 50px;
+			letter-spacing: 5px;
+			word-spacing: 10px;
+			text-align: right;
+			margin-top: 150px;
+			margin-bottom: 100px;
+		}
+		&_mockup {
+			position: absolute;
+			left: 0;
+			top: 50px;
+			z-index: 10;
+			width: 40%;
+			@include respondTo(largeScreen) {
+				width: 40%;
+			}
+		}
+		&_carousel {
+			width: 60%;
+			float: right;
+			
+		}
+		.owl-theme .owl-controls .owl-buttons div {
+			background-color: rgba(0,0,0,0);
+			background: url('../img/down-arrow.png');
+		}
+		.owl-buttons {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+		}
+		.owl-theme .owl-controls .owl-buttons div.owl-prev {
+			background: url('../img/up-arrow.png');
+			size: 28px 50px;
+			-webkit-background-size: contain;
+			     -o-background-size: contain;
+			        background-size: contain;
+			position: absolute;
+			right: 0;
+			display: none;
+		}
+		.owl-next {
+			position: absolute;
+			right: 0;
+			background-color: transparent;
+			background-image: url('../img/down-arrow.png');
+			background-repeat: no-repeat;
+			-webkit-background-size: contain;
+			     -o-background-size: contain;
+			        background-size: contain;
+			size: 28px 50px;
+		}
 	}
 }
 

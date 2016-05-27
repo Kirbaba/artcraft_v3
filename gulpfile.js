@@ -28,7 +28,10 @@ gulp.task('css-libs', function() { // Создаем таск Sass
         cssnano
     ]
     return gulp.src([
-            'app/libs/normalize-css/normalize.css'            
+            'app/libs/normalize-css/normalize.css',
+            'app/libs/owl/owl-carousel/owl.carousel.css',
+            'app/libs/owl/owl-carousel/owl.theme.css',
+            'app/libs/owl/owl-carousel/owl.transitions.css',              
         ]) // Берем источник        
         .pipe(postcss(processors))
         .pipe(concat('libs.min.css'))

@@ -1,3 +1,7 @@
+
+$red: #E1332D;
+$white: #fff;
+
 /* mouse anaimtion */
 
 .mouse {
@@ -7,8 +11,26 @@
   border-radius: 15px;
   border: 2px solid white;
   bottom: 40px;
-  left: 50%;
-  margin-left: -12px;
+  right: 5px;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  &:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 68px;
+    background-color: #40f389;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 .scroll {
@@ -51,3 +73,13 @@
     transform: translateY(20px);
   }
 }
+
+
+* {
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease-in-out;
+}
+
+

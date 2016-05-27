@@ -4,6 +4,10 @@ jQuery(document).ready(function($) {
 		navigation: true,
 		navigationPosition: 'left',
 		navigationTooltips: ['First page', 'Second page', 'Third and last page'],
-		responsiveWidth: 900
+		responsiveWidth: 900,
+		
 	});
 });
+
+
+

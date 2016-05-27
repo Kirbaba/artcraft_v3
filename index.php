@@ -13,23 +13,57 @@ get_header(); // подключаем header.php ?>
 			<!-- open .home__banner_title -->
 			<div class="home__banner_title">
 				<!-- open .home__banner_rectangle -->
+				<h2 class="home__banner_text">ART CRAFT</h2>
 				<div   class="home__banner_rectangle parallax-layer">
-					<h2 class="parallax parallax-layer">ART CRAFT</h2>
-					<img class="home__banner_interface parallax parallax-layer" src="<?php bloginfo('template_directory'); ?>/img/interface.png" alt="" />
+				
+				<img class="home__banner_interface parallax parallax-layer" src="<?php bloginfo('template_directory'); ?>/img/interface.png" alt="" />
 				</div>
-				<!-- close .home__banner_rectangle -->
-			
+				<!-- close .home__banner_rectangle -->			
+				<!-- close .home__banner_title -->	
+				<!-- open .home__banner_desc -->
+				<h3 class="home__banner_desc">DESIGN & WEB</h3>
+				<!-- close .home__banner_desc -->
+				<div class="mouse animated fadeInUp" data-top=" opacity:1;  " data-top-bottom=" opacity:0; " data-anchor-target="header">
+					<div class="scroll"></div>
+				</div>
 			</div>
-			<!-- close .home__banner_title -->	
-			
+			<a href="#" class="home__banner_btn btn-1">
+				<svg>
+					<rect x="0" y="0" fill="none" width="100%" height="100%"/>
+				</svg>
+				УЗНАТЬ  БОЛЬШЕ
+			</a>
 		</div>
 		<!-- close .container -->
-		<div class="mouse animated fadeInUp" data-top=" opacity:1;  " data-top-bottom=" opacity:0; " data-anchor-target="header">
-			<div class="scroll">
-			</div></div>
+		
 	</div>
 	<div class="section home__partners" id="section1">
-	   
+	<!-- open .container -->
+	<div class="container">
+		<h2>С нами работают</h2>
+		<!-- open .home__partners_carousel -->
+		<div class="home__partners_carousel">
+			<!-- open .home__partners_carousel_item -->
+			<div class="home__partners_carousel_item">
+				<img src="<?php bloginfo('template_directory'); ?>/img/logo1.png" alt="" /></div>
+			<!-- close .home__partners_carousel_item -->
+			<!-- open .home__partners_carousel_item -->
+			<div class="home__partners_carousel_item">
+				<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" /></div>
+			<!-- close .home__partners_carousel_item -->
+			<!-- open .home__partners_carousel_item -->
+			<div class="home__partners_carousel_item">
+				<img src="<?php bloginfo('template_directory'); ?>/img/logo1.png" alt="" /></div>
+			<!-- close .home__partners_carousel_item -->
+			<!-- open .home__partners_carousel_item -->
+			<div class="home__partners_carousel_item">
+				<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" /></div>
+			<!-- close .home__partners_carousel_item -->
+		</div>
+		<!-- close .home__partners_carousel -->
+	</div>
+	<!-- close .container -->
+	 	<img class="home__partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mac-mocup.png" alt="" />
 
 	</div><!-- 
 	<div class="section" id="section2">

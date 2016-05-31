@@ -209,5 +209,75 @@
 			size: 28px 50px;
 		}
 	}
+	&__services {
+		color: #251C1D;
+		h3 {
+			font-family: $l;
+			font-size: 35px;
+			strong {
+				font-family: $bl;
+			}
+		}
+		&__flex {
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+			-webkit-align-items: flex-start;
+			        align-items: flex-start;
+			-webkit-justify-content: space-between;
+			        justify-content: space-between;
+		}
+		&_item {
+			width: 250px;
+			margin: 15px 0;
+		}
+		&_icon {
+			width: 100%;
+			height: 150px;
+			position: relative;
+			text-align: center;			
+		}
+		&_title {
+			float: left;
+			width: 100%;		
+			h4 {
+				float: left;
+				position: relative;
+				padding-bottom: 25px;
+				padding-right: 20px;
+				font-family: $b;
+				text: #251c1d 25px;
+				margin: 10px 0;
+				&:before, &:after {
+					content: "";
+					position: absolute;
+				}
+				&:before {
+					width: 58px;
+					height: 6px;
+					background-color: #251b1d;
+					left: 20px;
+					bottom: 15px;
+				}
+				&:after {
+					bottom: 0;
+					right: 0;
+					width: 4px;
+					height: 42px;
+					background-color: #00a1a7;
+				}
+			}
+		}
+		&_list {
+			float: left;
+			width: 100%;
+			padding: 0;
+			li {
+				text: #251c1d uppercase 16px;
+				margin-bottom: 15px;
+			}
+		}
+	}
 }
 

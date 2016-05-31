@@ -71,14 +71,92 @@ get_header(); // подключаем header.php ?>
 		</div>
 		<!-- close .home__partners_carousel -->
 	</div>
-	close .container
-	 	<img class="home__partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mac-mocup.png" alt="" />
+ 	<img class="home__partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mac-mocup.png" alt="" />
 
 	</div>
 
 	<div class="section home__services" id="section3">
 		<div class="intro">
+		<!-- open .container -->
+		<div class="container">
+			<h3>#Я<strong>ARTCRAFT</strong></h3>
+			<!-- open .home__services_item -->
+			<!-- open .home__services__flex -->
+			<div class="home__services__flex">
+				<div class="home__services_item">
+					<!-- open .home__services_icon -->
+					<div class="home__services_icon">
+						<img src="<?php bloginfo('template_directory'); ?>/img/04298abddeeee76679ef90e2dcb1f72b.png" alt="" />
+					</div>
+					<!-- close .home__services_icon -->
+					<!-- open .home__services_title -->
+					<div class="home__services_title">
+						<h4>СТРАТЕГИЯ</h4>
+					</div>
+					<!-- close .home__services_title -->
+					
+					<!-- open .home__services_list -->
+					<ul class="home__services_list">
+						<li>аудит сайта</li>
+						<li>Online-исследования</li>
+						<li>Коммуникационная стратегия</li>
+						<li>SMM-стратегия</li>
+					</ul>
+					<!-- close .home__services_list -->
+				</div>
+				<!-- close .home__services_item -->
+				<!-- open .home__services_item -->
+				<div class="home__services_item">
+					<!-- open .home__services_icon -->
+					<div class="home__services_icon">
+						<img src="<?php bloginfo('template_directory'); ?>/img/00179f806d7cfba4274a5d1705fa1ece.png" alt="" />
+					</div>
+					<!-- close .home__services_icon -->
+					<!-- open .home__services_title -->
+					<div class="home__services_title">
+						<h4>ДИЗАЙН</h4>
+					</div>
+					<!-- close .home__services_title -->
+					<!-- open .home__services_list -->
+					<ul class="home__services_list">
+						<li>Прототипы</li>
+						<li>Информационный дизайн</li>
+						<li>Полиграфия</li>
+						<li>Разработка платформы бренда</li>
+						<li>Нейминг, разработка слогана</li>
+						<li>Логотип, фирменный стиль</li>
+					</ul>
+					<!-- close .home__services_list -->
+				</div>
+				<!-- close .home__services_item -->
+				<!-- open .home__services_item -->
+				<div class="home__services_item">
+					<!-- open .home__services_icon -->
+					<div class="home__services_icon">
+						<img src="<?php bloginfo('template_directory'); ?>/img/c64d6ce166af46960db44ea1213cbfb3.png" alt="" />
+					</div>
+					<!-- close .home__services_icon -->
+					<!-- open .home__services_title -->
+					<div class="home__services_title">
+						<h4>СТРАТЕГИЯ</h4>
+					</div>
+					<!-- close .home__services_title -->
+					<!-- open .home__services_list -->
+					<ul class="home__services_list">
+						<li>Техническое задание</li>
+						<li>Веб-разработка</li>
+						<li>Адаптивный дизайн</li>
+						<li>Адаптивный дизайн</li>
+					</ul>
+					<!-- close .home__services_list -->
+				</div>
+				<!-- close .home__services_item -->
+			</div>
+			<!-- close .home__services__flex -->
 			
+		</div>
+		<!-- close .container -->
+
 		</div>
 	</div>
 

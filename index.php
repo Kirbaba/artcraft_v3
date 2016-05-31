@@ -13,10 +13,10 @@ get_header(); // подключаем header.php ?>
 			<!-- open .home__banner_title -->
 			<div class="home__banner_title">
 				<!-- open .home__banner_rectangle -->
-				<h2 class="home__banner_text">ART CRAFT</h2>
-				<div   class="home__banner_rectangle parallax-layer">
+				<h2 class="home__banner_text layer" data-depth="0.5">ART CRAFT</h2>
+				<div   class="home__banner_rectangle parallax-layer layer" data-depth="0.1">
 				
-				<img class="home__banner_interface parallax parallax-layer" src="<?php bloginfo('template_directory'); ?>/img/interface.png" alt="" />
+				<img class="home__banner_interface parallax parallax-layer layer" data-depth="0.3" src="<?php bloginfo('template_directory'); ?>/img/interface.png" alt="" />
 				</div>
 				<!-- close .home__banner_rectangle -->			
 				<!-- close .home__banner_title -->	
@@ -45,27 +45,44 @@ get_header(); // подключаем header.php ?>
 		<div class="home__partners_carousel">
 			<!-- open .home__partners_carousel_item -->
 			<div class="home__partners_carousel_item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/logo1.png" alt="" /></div>
+				<img src="<?php bloginfo('template_directory'); ?>/img/kewledits.weebly(65).png" alt="" />
+			</div>
 			<!-- close .home__partners_carousel_item -->
 			<!-- open .home__partners_carousel_item -->
 			<div class="home__partners_carousel_item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" /></div>
+				<img src="<?php bloginfo('template_directory'); ?>/img/HTML5_Logo_512.png" alt="" />
+			</div>
 			<!-- close .home__partners_carousel_item -->
 			<!-- open .home__partners_carousel_item -->
 			<div class="home__partners_carousel_item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/logo1.png" alt="" /></div>
+				<img src="<?php bloginfo('template_directory'); ?>/img/nirvana02.png" alt="" />
+			</div>
 			<!-- close .home__partners_carousel_item -->
 			<!-- open .home__partners_carousel_item -->
 			<div class="home__partners_carousel_item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" /></div>
+				<img src="<?php bloginfo('template_directory'); ?>/img/logo1.png" alt="" />
+			</div>
+			<!-- close .home__partners_carousel_item -->
+			<!-- open .home__partners_carousel_item -->
+			<div class="home__partners_carousel_item">
+				<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" />
+			</div>
 			<!-- close .home__partners_carousel_item -->
 		</div>
 		<!-- close .home__partners_carousel -->
 	</div>
-	<!-- close .container -->
+	close .container
 	 	<img class="home__partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mac-mocup.png" alt="" />
 
-	</div><!-- 
+	</div>
+
+	<div class="section home__services" id="section3">
+		<div class="intro">
+			
+		</div>
+	</div>
+
+	<!-- 
 	<div class="section" id="section2">
 		<div class="intro">
 			<div class="slide" id="slide1">

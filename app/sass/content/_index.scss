@@ -11,32 +11,25 @@
 			position: relative;
 			margin: 50px auto;
 			width: 100%;
-			height: 300px;
+			height: 270px;
 			h2 {
 				position: absolute;
-				-webkit-transform: translate(65%, 65%);
-				   -moz-transform: translate(65%, 65%);
-				    -ms-transform: translate(65%, 65%);
-				     -o-transform: translate(65%, 65%);
-				        transform: translate(65%, 65%);
+				top: 25%;
+				left: 25%;
 				margin: 0;
-				z-index: 9999;
+				z-index: 9999!important;
 				font-family: $bl;
 				text: #f6fdfd center 100px;
 				@include text-shadow(5px 9px 7px rgba(0,0,0,.35));
-				/* width: 60%; */
-				/* top: 50%;
-				left: 50%; */
+				@include transition(.2s);
  			}
 		}
 		&_interface {
 			position: absolute;
 			width: 90%;
-			-webkit-transform: translate(10%, -20%);
-			   -moz-transform: translate(10%, -20%);
-			    -ms-transform: translate(10%, -20%);
-			     -o-transform: translate(10%, -20%);
-			        transform: translate(10%, -20%);
+			left: 5%;
+			top: -50%;
+			@include transition(.4s);
 			z-index: 2;
 		}
 		&_rectangle {
@@ -50,7 +43,7 @@
 			        box-sizing: border-box;
 			border: 20px solid #fff;
 			@include box-shadow(5px 9px 7px rgba(0,0,0,.35));
-			
+			@include transition(.2s);
 			z-index: 1;
 			&:after {
 				content: "";
@@ -116,7 +109,7 @@
 			letter-spacing: 4px;
 			word-spacing: 20px;
 			position: absolute;
-			right: -70px;
+			right: -75px;
 			top: 45px;
 			margin: 0;
 			-webkit-transform: rotate(90deg);
@@ -157,17 +150,40 @@
 			}
 		}
 		&_carousel {
-			width: 60%;
+			width: 70%;
 			float: right;
-			
+			box-sizing: border-box;
+			padding: 0 50px;
+			&_item {
+				height: 250px;
+				position: relative;
+				img {
+					object-fit: contain;
+					object-position: 50% 50%;
+					position: relative;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translate(-50%, -50%);
+					   -moz-transform: translate(-50%, -50%);
+					    -ms-transform: translate(-50%, -50%);
+					     -o-transform: translate(-50%, -50%);
+					        transform: translate(-50%, -50%);
+					max-width: 100%;
+				}
+			}
 		}
 		.owl-theme .owl-controls .owl-buttons div {
 			background-color: rgba(0,0,0,0);
 			background: url('../img/down-arrow.png');
+			-webkit-transform: translateY(-50%);
+			   -moz-transform: translateY(-50%);
+			    -ms-transform: translateY(-50%);
+			     -o-transform: translateY(-50%);
+			        transform: translateY(-50%);
 		}
 		.owl-buttons {
 			position: absolute;
-			top: 0;
+			top: 50%;
 			right: 0;
 			left: 0;
 		}

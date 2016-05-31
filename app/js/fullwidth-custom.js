@@ -7,6 +7,12 @@ jQuery(document).ready(function($) {
 		responsiveWidth: 900,
 		
 	});
+
+	$('.mouse').click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionDown();
+	});
+
 });
 
 

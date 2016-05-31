@@ -82,7 +82,8 @@ function add_scripts() { // добавление скриптов
     wp_enqueue_script('fullPage', get_template_directory_uri().'/js/jquery.fullPage.min.js','','',true);
     wp_enqueue_script('simmScroll', get_template_directory_uri().'/js/jquery.slimscroll.min.js','','',true);
     wp_enqueue_script('owl', get_template_directory_uri().'/js/owl.carousel.min.js','','',true);
-    wp_enqueue_script('parallax', get_template_directory_uri().'/js/jquery.parallax.min.js','','',true);
+    wp_enqueue_script('parallax', get_template_directory_uri().'/js/parallax.min.js','','',true);
+    wp_enqueue_script('mouse-parallax', get_template_directory_uri().'/js/mouse.parallax.js','','',true);
     wp_enqueue_script('modernizr', get_template_directory_uri().'/js/modernizr.js','','');
    
    
@@ -100,6 +101,7 @@ function add_styles() { // добавление стилей
     if(is_admin()) return false; // если мы в админке - ничего не делаем
     wp_enqueue_style( 'libs', get_template_directory_uri().'/css/libs.min.css' );// Нормалайз
     wp_enqueue_style( 'fullPage', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/jquery.fullPage.min.css' );// бутстрап
+    /*wp_enqueue_style( 'parallax', get_template_directory_uri().'/css/mouseparallax.css' );*/
     wp_enqueue_style( 'custom-styles', get_template_directory_uri().'/css/style.min.css' ); 
 	wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); // основные стили шаблона
 }

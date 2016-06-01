@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
-	    jQuery(".home__partners_carousel").owlCarousel({    
-            navigation : false, 
+	    jQuery(".home-partners_carousel").owlCarousel({
+            navigation : false,
             items : 3,
             slideSpeed : 1000,
             paginationSpeed : 400,

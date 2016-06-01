@@ -64,7 +64,7 @@ function pagination() { // функция вывода пагинации
 	    echo '<ul class="pagination">';
 	    foreach ( $links as $link ) {
 	    	if ( strpos( $link, 'current' ) !== false ) echo "<li class='active'>$link</li>"; // если это активная страница
-	        else echo "<li>$link</li>"; 
+	        else echo "<li>$link</li>";
 	    }
 	   	echo '</ul>';
 	 }
@@ -74,19 +74,20 @@ add_action('wp_footer', 'add_scripts'); // приклеем ф-ю на доба�
 function add_scripts() { // добавление скриптов
     if(is_admin()) return false; // если мы в админке - ничего не делаем
     wp_deregister_script('jquery'); // выключаем стандартный jquery
-   /* wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js','','',true);*/ 
-    wp_enqueue_script('jquery', get_template_directory_uri().'/js/jquery.min.js','',''); 
-   
-   
+   /* wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js','','',true);*/
+    wp_enqueue_script('jquery', get_template_directory_uri().'/js/jquery.min.js','','');
+
+
     wp_enqueue_script('easings', get_template_directory_uri().'/js/jquery.easings.min.js','','',true);
     wp_enqueue_script('fullPage', get_template_directory_uri().'/js/jquery.fullPage.min.js','','',true);
     wp_enqueue_script('simmScroll', get_template_directory_uri().'/js/jquery.slimscroll.min.js','','',true);
     wp_enqueue_script('owl', get_template_directory_uri().'/js/owl.carousel.min.js','','',true);
     wp_enqueue_script('parallax', get_template_directory_uri().'/js/parallax.min.js','','',true);
-    wp_enqueue_script('mouse-parallax', get_template_directory_uri().'/js/mouse.parallax.js','','',true);
+    wp_enqueue_script('swiper','https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js','','',true);
     wp_enqueue_script('modernizr', get_template_directory_uri().'/js/modernizr.js','','');
-   
-   
+    wp_enqueue_script('particles', 'http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js','','', true);
+
+
     wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.js','','',true); // бутстрап
     wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
 	wp_localize_script('main', 'myajax',
@@ -100,9 +101,10 @@ add_action('wp_print_styles', 'add_styles'); // приклеем ф-ю на до
 function add_styles() { // добавление стилей
     if(is_admin()) return false; // если мы в админке - ничего не делаем
     wp_enqueue_style( 'libs', get_template_directory_uri().'/css/libs.min.css' );// Нормалайз
-    wp_enqueue_style( 'fullPage', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/jquery.fullPage.min.css' );// бутстрап
+    wp_enqueue_style( 'fullPage', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/jquery.fullPage.min.css' );
+    wp_enqueue_style( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css' );
     /*wp_enqueue_style( 'parallax', get_template_directory_uri().'/css/mouseparallax.css' );*/
-    wp_enqueue_style( 'custom-styles', get_template_directory_uri().'/css/style.min.css' ); 
+    wp_enqueue_style( 'custom-styles', get_template_directory_uri().'/css/style.min.css' );
 	wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); // основные стили шаблона
 }
 
@@ -119,4 +121,3 @@ function content_class_by_sidebar() { // функция для вывода кл
 		echo 'col-sm-12'; // контент на всю ширину
 	}
 }
-

@@ -3,9 +3,8 @@ jQuery(document).ready(function($) {
 		sectionsColor: [],
 		navigation: true,
 		navigationPosition: 'left',
-		navigationTooltips: ['First page', 'Second page', 'Third and last page'],
 		responsiveWidth: 900,
-		
+
 	});
 
 	$('.mouse').click(function(e){
@@ -15,13 +14,10 @@ jQuery(document).ready(function($) {
 
 });
 
-
-
-
 jQuery(document).ready(function($) {
 
-	    jQuery(".home__partners_carousel").owlCarousel({    
-            navigation : false, 
+	    jQuery(".home-partners_carousel").owlCarousel({
+            navigation : false,
             items : 3,
             slideSpeed : 1000,
             paginationSpeed : 400,
@@ -33,51 +29,18 @@ jQuery(document).ready(function($) {
             pagination : false
       });
 });
-jQuery(document).ready(function($) {
-/*  var scene = document.getElementById('section0');
-  var parallax = new Parallax(scene, {
-    calibrateX: false,
-    calibrateY: true,
-    invertX: false,
-    invertY: true,
-    limitX: 40,
-    limitY: 50,
-    frictionX: 0.2,
-    frictionY: 0.8,
-    /*scalarX: 2,
-    scalarY: 8,
-    
-    originX: 0.0,
-    originY: 1.0
-  });*/
-
- 
-/*  $('.home__banner_rectangle').mouseParallax({ moveFactor: 5});
-  $('.home__banner_interface').mouseParallax({ moveFactor: 3 });
-   $('.home__banner_text').mouseParallax({ moveFactor: 2 });*/
-}); 
-
-/*jQuery(document).ready(function($){
-    // Declare parallax on layers
-    jQuery('.parallax-layer').parallax({
-      mouseport: jQuery(".home__banner_title"),
-      xparallax: 0.1,
-      yparallax: 0.1,
-      yorigin: "center"
-    });
-});*/
 
 jQuery(document).ready(function($) {
-    $('.home__banner').mousemove(function(e) {
+    $('.home-banner').mousemove(function(e) {
      var amountMovedX = (e.clientX * -0.25 / 8);
      var amountMovedY = (e.clientY * -0.25 / 8);
-      $(".home__banner_rectangle").css({
+      $(".home-banner_rectangle").css({
         transform: 'translate(' + amountMovedX + 'px,'+ amountMovedY + 'px) ',
        MozTransform: 'translate(' + amountMovedX + 'px,'+ amountMovedY + 'px) ',
        WebkitTransform: 'translate(' + amountMovedX + 'px,'+ amountMovedY + 'px) ',
        msTransform: 'translate(' + amountMovedX + 'px,'+ amountMovedY + 'px) '
       });
-     $(".home__banner_interface").css({
+     $(".home-banner_interface").css({
         /*'top': amountMovedY + 'px ',
         'left': amountMovedX + 'px '*/
         transform: 'translate(' + amountMovedX + 'px,'+ amountMovedY + 'px) ',
@@ -85,7 +48,7 @@ jQuery(document).ready(function($) {
        WebkitTransform: 'translate(' + amountMovedX + 'px,'+ amountMovedY + 'px) ',
        msTransform: 'translate(' + amountMovedX + 'px,'+ amountMovedY + 'px) '
       });
-     $(".home__banner_text").css({
+     $(".home-banner_text").css({
         /*'top': (amountMovedY * 2) + 'px ',
         'left': (amountMovedX * 2) + 'px '*/
         transform: 'translate(' + amountMovedX + 'px,'+ amountMovedY + 'px) ',
@@ -94,22 +57,139 @@ jQuery(document).ready(function($) {
        msTransform: 'translate(' + amountMovedX + 'px,'+ amountMovedY + 'px) '
       });
     });
-});   
+});
 
-/* $('.home__banner_interface').mousemove(function(e) {
-     var amountMovedX = (e.pageX * -0.3 / 6);
-     var amountMovedY = (e.pageY * -1.29 / 6);
-     $(this).css({
-        'top': amountMovedX + 'px ',
-        'left': amountMovedY + 'px '
-      });
-    });*/
-   /* $('.home__banner_text').mousemove(function(e) {
-     var amountMovedX = (e.pageX * -0.3 / 6);
-     var amountMovedY = (e.pageY * -1.29 / 6);
-     $(this).css({
-        'top': amountMovedX + 'px ',
-        'left': amountMovedY + 'px '
-      });
-    });
-});*/
+
+jQuery(document).ready(function($) {
+ 
+    particlesJS("particles-js", {
+      "particles": {
+    "number": {
+      "value": 120,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#00abb1"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#00abb1"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.8,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3.945738208161363,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 55.14485514485514,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+    }); 
+});
+
+/* ---- particles.js config ---- */
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", ready);
+function ready() {
+  var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    parallax: true,
+    speed: 600,
+  });
+}

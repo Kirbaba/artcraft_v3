@@ -3,7 +3,6 @@ var gulp = require('gulp'), // Подключаем Gulp
     browserSync = require('browser-sync'), // Подключаем Browser Sync
     concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
     uglify = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
-    //cssnano = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
     rename = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
     del = require('del'), // Подключаем библиотеку для удаления файлов и папок
     imagemin = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
@@ -31,8 +30,8 @@ gulp.task('css-libs', function() { // Создаем таск Sass
             'app/libs/normalize-css/normalize.css',
             'app/libs/owl/owl-carousel/owl.carousel.css',
             'app/libs/owl/owl-carousel/owl.theme.css',
-            'app/libs/owl/owl-carousel/owl.transitions.css',              
-        ]) // Берем источник        
+            'app/libs/owl/owl-carousel/owl.transitions.css',
+        ]) // Берем источник
         .pipe(postcss(processors))
         .pipe(concat('libs.min.css'))
         .pipe(gulp.dest('css')) // Выгружаем результата в папку app/css
@@ -53,22 +52,20 @@ gulp.task('js-libs', function() {
 gulp.task('sass', function() { // Создаем таск Sass
     var processors = [
         assets,
-        shortspacing,
         short,
-        autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
+        autoprefixer(['last 5 versions', '> 5%', 'ie 8', 'ie 7'], {
             cascade: true
         }),
-
         pxtorem({
             rootValue: 14,
             replace: false
         }),
         stylefmt,
-        cssnano   
+        cssnano
     ];
-    return gulp.src('app/sass/**/*.scss')        
-        .pipe(sass().on('error', sass.logError))     
-        .pipe(postcss(processors))   
+    return gulp.src('app/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss(processors))
         .pipe(rename({
             suffix: ".min",
             extname: ".css"
@@ -106,13 +103,13 @@ gulp.task('img', function() {
         .pipe(gulp.dest('img'))
         .pipe(browserSync.reload({
             stream: true
-        })); 
+        }));
 });
 
 gulp.task('compress', function() {
-  return gulp.src('app/js/*.js')    
+  return gulp.src('app/js/*.js')
     .pipe(concat('script.js'))
-    .pipe(gulp.dest('js'));    
+    .pipe(gulp.dest('js'));
 });
 
 gulp.task('watch', ['browser-sync'],  function() {

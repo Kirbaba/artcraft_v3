@@ -3,9 +3,8 @@ jQuery(document).ready(function($) {
 		sectionsColor: [],
 		navigation: true,
 		navigationPosition: 'left',
-		navigationTooltips: ['First page', 'Second page', 'Third and last page'],
 		responsiveWidth: 900,
-		
+
 	});
 
 	$('.mouse').click(function(e){
@@ -14,6 +13,3 @@ jQuery(document).ready(function($) {
 	});
 
 });
-
-
-

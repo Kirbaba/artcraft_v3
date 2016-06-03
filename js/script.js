@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 		sectionsColor: [],
 		navigation: true,
 		navigationPosition: 'left',
-		responsiveWidth: 900,
+		responsive: 1400,
 
 	});
 
@@ -191,5 +191,7 @@ function ready() {
     prevButton: '.swiper-button-prev',
     parallax: true,
     speed: 600,
+    watchSlidesProgress: true,
+    grabCursor: true,
   });
 }

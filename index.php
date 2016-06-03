@@ -161,14 +161,72 @@ get_header(); // подключаем header.php ?>
 	</div>
 
 
-	<!-- <div class="section home-projects" id="section4">
+	<div class="section home-projects" id="section4">
 		<div class="intro">
 				<div class="container">
 					<h2>ПРОЕКТЫ</h2>
 					<h4>В данном разделе представлены только избранные проекты нашей компании за период с 2004 года.</h4>
+					<div class="home-projects__flex">
+						<a href="#" class="home-projects__more">
+							<img src="<?php bloginfo('template_directory'); ?>/img/portfolio_0.png" alt="" />
+							<span class="home-projects__more_type">яркий дизайн</span>
+							<span>больше работ</span>
+						</a>
+						<a href="#" class="home-projects__more">
+							<img src="<?php bloginfo('template_directory'); ?>/img/portfolio_1.png" alt="" />
+							<span class="home-projects__more_type">яркий дизайн</span>
+							<span>больше работ</span>
+						</a>
+						<div class="home-projects__tabs show_site">
+								<a href="#" class="home-projects__tabs_item">
+									<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+								</a>
+								<a href="#" class="home-projects__tabs_item">
+									<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+								</a>
+								<a href="#" class="home-projects__tabs_item">
+									<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+								</a>
+						</div>
+						<div class="home-projects__tabs show_design">
+							<a href="#" class="home-projects__tabs_item">
+								<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+							</a>
+							<a href="#" class="home-projects__tabs_item">
+								<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+							</a>
+							<a href="#" class="home-projects__tabs_item">
+								<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+							</a>
+						</div>
+						<div class="home-projects__tabs show_smm">
+							<a href="#" class="home-projects__tabs_item">
+								<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+							</a>
+							<a href="#" class="home-projects__tabs_item">
+								<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+							</a>
+							<a href="#" class="home-projects__tabs_item">
+								<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+							</a>
+						</div>
+						<nav class="home-projects__nav">
+							<ul>
+								<li>
+									<a href="#" class="home-projects__nav_btn home-projects__nav_btn_active" data-activity="show_site">РАЗРАБОТКА САЙТА</a>
+								</li>
+								<li>
+									<a href="#" class="home-projects__nav_btn" data-activity="show_design">ДИЗАЙН</a>
+								</li>
+								<li>
+									<a href="#" class="home-projects__nav_btn" data-activity="show_smm">SMM</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
 				</div>
 		</div>
-	</div> -->
+	</div>
 
 
 
@@ -196,10 +254,10 @@ get_header(); // подключаем header.php ?>
 										с клиентом. Все это совершенно БЕСПЛАТНО!
 										</p>
 									</div>
-									<a href="#" class="home-steps__item_description_btn"><span>Оформить заказ</span></a>	
+									<a href="#" class="home-steps__item_description_btn"><span>Оформить заказ</span></a>
 								</div>
 								<!-- close .flexw -->
-								
+
 							</div>
 						</div>
 						<div class="swiper-slide home-steps__item">
@@ -217,10 +275,10 @@ get_header(); // подключаем header.php ?>
 											тоторый обеспечивает наша стулия.
 										</p>
 									</div>
-									<a href="#" class="home-steps__item_description_btn"><span>Оформить заказ</span></a>	
+									<a href="#" class="home-steps__item_description_btn"><span>Оформить заказ</span></a>
 								</div>
 								<!-- close .flexw -->
-								
+
 							</div>
 						</div>
 						<div class="swiper-slide home-steps__item">
@@ -235,16 +293,16 @@ get_header(); // подключаем header.php ?>
 										<p>Лендинг - это круглосуточный менеджер продаж вашей
 											компании. Естественно. если у менеджера продаж правый
 											рукав пиджака длиннеее левого, Вы отнесетесь к его
-											предложению скептически 
+											предложению скептически
 										</p>
 									</div>
-									<a href="#" class="home-steps__item_description_btn"><span>Оформить заказ</span></a>	
+									<a href="#" class="home-steps__item_description_btn"><span>Оформить заказ</span></a>
 								</div>
 								<!-- close .flexw -->
-								
+
 							</div>
 						</div>
-						
+
 					</div>
 					<!-- Add Pagination -->
 					<div class="swiper-pagination swiper-pagination-black"></div>

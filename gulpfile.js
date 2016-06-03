@@ -115,7 +115,7 @@ gulp.task('compress', function() {
 gulp.task('watch', ['browser-sync'],  function() {
     gulp.watch('app/img/**/*', ['img']);
     gulp.watch('app/sass/**/*.scss', ['sass']);
-    gulp.watch('./**/*.php', browserSync.reload);
+    // gulp.watch('./**/*.php', browserSync.reload);
     gulp.watch('app/js/*', function() {
        gulp.run('compress');
   }, browserSync.reload); // Наблюдение за JS файлами в папке js

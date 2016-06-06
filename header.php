@@ -26,4 +26,22 @@
 	<?php wp_head(); // необходимо для работы плагинов и функционала ?>
 </head>
 <body <?php body_class(); // все классы для body ?>>
-	
+<!-- open .navigation -->
+<nav class="navigation">
+<!-- open .container -->
+<div class="container">
+	<!-- open .navigation__logo -->
+	<div class="navigation__logo">
+		<h3>ART CRAFT</h3>
+	</div>
+	<!-- close .navigation__logo -->
+	<ul id="navmenu">
+		<li data-menuanchor="secondPage"><a href="#" id="moveToTop">Главная</a></li>
+		<li data-menuanchor="firstPage"><a href="#nowhere" id="moveToProjects">Проекты</a></li>
+		<li data-menuanchor="secondPage"><a href="#nowhere"  id="moveToAbout">О нас</a></li>
+	</ul>
+</div>
+<!-- close .container -->
+
+</nav>
+<!-- close .navigation -->

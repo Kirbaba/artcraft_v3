@@ -137,8 +137,12 @@
 			letter-spacing: 5px;
 			word-spacing: 10px;
 			text-align: right;
-			margin-top: 200px;
-			margin-bottom: 50px;
+			margin-top: 65px;
+    		margin-bottom: 15px;
+    		@include respondTo(largeScreen) {
+				margin-top: 200px;
+    			margin-bottom: 50px;
+			}
 		}
 		h3{
 			float: left;
@@ -164,7 +168,7 @@
 			}
 		}
 		&_carousel {
-			width: 70%;
+			width: 65%;
 			float: right;
 			box-sizing: border-box;
 			padding: 0 50px;
@@ -184,6 +188,9 @@
 					        transform: translate(-50%, -50%);
 					max-width: 100%;
 				}
+			}
+			@include respondTo(largeScreen) {
+				width: 70%;
 			}
 		}
 		.owl-theme .owl-controls .owl-buttons div {

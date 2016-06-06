@@ -7,7 +7,7 @@
 get_header(); // подключаем header.php ?>
 
 <div id="fullpage">
-	<div class="section home-banner" id="section0">
+	<div class="section home-banner" id="banner">
 		<!-- open .container -->
 		<div class="container">
 			<!-- open .home-banner_title -->
@@ -35,7 +35,7 @@ get_header(); // подключаем header.php ?>
 		</div>		<!-- close .container -->
 
 	</div>
-	<div class="section home-partners" id="section1">
+	<div class="section home-partners" id="home-partners">
 		<!-- open .container -->
 		<div class="container">
 			<h2>С нами работают</h2>
@@ -76,7 +76,7 @@ get_header(); // подключаем header.php ?>
 
 	</div>
 
-	<div class="section home-services" id="section3">
+	<div class="section home-services" id="home-services">
 		<div id="particles-js"></div>
 		<div class="intro">
 		<!-- open .container -->
@@ -163,7 +163,7 @@ get_header(); // подключаем header.php ?>
 	</div>
 
 
-	<div class="section home-projects" id="section4">
+	<div class="section home-projects" id="home-projects">
 		<div class="intro">
 				<div class="container">
 					<h2>ПРОЕКТЫ</h2>

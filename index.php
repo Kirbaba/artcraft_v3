@@ -32,45 +32,47 @@ get_header(); // подключаем header.php ?>
 				</svg>
 				УЗНАТЬ  БОЛЬШЕ
 			</a>
-		</div>
-		<!-- close .container -->
+		</div>		<!-- close .container -->
 
 	</div>
 	<div class="section home-partners" id="section1">
-	<!-- open .container -->
-	<div class="container">
-		<h2>С нами работают</h2>
-		<!-- open .home-partners_carousel -->
-		<div class="home-partners_carousel">
-			<!-- open .home-partners_carousel_item -->
-			<div class="home-partners_carousel_item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/kewledits.weebly(65).png" alt="" />
+		<!-- open .container -->
+		<div class="container">
+			<h2>С нами работают</h2>
+			<!-- open .home-partners_carousel -->
+			<div class="home-partners_carousel">
+				<!-- open .home-partners_carousel_item -->
+				<div class="home-partners_carousel_item">
+					<img src="<?php bloginfo('template_directory'); ?>/img/kewledits.weebly(65).png" alt="" />
+				</div>
+				<!-- close .home-partners_carousel_item -->
+				<!-- open .home-partners_carousel_item -->
+				<div class="home-partners_carousel_item">
+					<img src="<?php bloginfo('template_directory'); ?>/img/HTML5_Logo_512.png" alt="" />
+				</div>
+				<!-- close .home-partners_carousel_item -->
+				<!-- open .home-partners_carousel_item -->
+				<div class="home-partners_carousel_item">
+					<img src="<?php bloginfo('template_directory'); ?>/img/nirvana02.png" alt="" />
+				</div>
+				<!-- close .home-partners_carousel_item -->
+				<!-- open .home-partners_carousel_item -->
+				<div class="home-partners_carousel_item">
+					<img src="<?php bloginfo('template_directory'); ?>/img/logo1.png" alt="" />
+				</div>
+				<!-- close .home-partners_carousel_item -->
+				<!-- open .home-partners_carousel_item -->
+				<div class="home-partners_carousel_item">
+					<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" />
+				</div>
+				<!-- close .home-partners_carousel_item -->
 			</div>
-			<!-- close .home-partners_carousel_item -->
-			<!-- open .home-partners_carousel_item -->
-			<div class="home-partners_carousel_item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/HTML5_Logo_512.png" alt="" />
-			</div>
-			<!-- close .home-partners_carousel_item -->
-			<!-- open .home-partners_carousel_item -->
-			<div class="home-partners_carousel_item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/nirvana02.png" alt="" />
-			</div>
-			<!-- close .home-partners_carousel_item -->
-			<!-- open .home-partners_carousel_item -->
-			<div class="home-partners_carousel_item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/logo1.png" alt="" />
-			</div>
-			<!-- close .home-partners_carousel_item -->
-			<!-- open .home-partners_carousel_item -->
-			<div class="home-partners_carousel_item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" />
-			</div>
-			<!-- close .home-partners_carousel_item -->
+			<!-- close .home-partners_carousel -->
+			<h3>Далеко-далеко за словесными.</h3>
+			<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами, дал осталось вскоре заманивший.</p>
+			<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Встретил осталось они дал, коварный выйти запятых возвращайся переписали гор.</p>	
 		</div>
-		<!-- close .home-partners_carousel -->
-	</div>
- 	<img class="home-partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mac-mocup.png" alt="" />
+	 	<img class="home-partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mac-mocup.png" alt="" />
 
 	</div>
 
@@ -174,7 +176,7 @@ get_header(); // подключаем header.php ?>
 									<span class="home-projects__more_type">яркий дизайн</span>
 									<span class="home-projects__more_btn"><span>больше работ</span></span>
 								</span>
-								
+
 							</span>
 						</a>
 						<!-- open .home-projects__more_diamond -->
@@ -189,7 +191,7 @@ get_header(); // подключаем header.php ?>
 									<span class="home-projects__more_type">сайт под ключ</span>
 									<span class="home-projects__more_btn"><span>больше работ</span></span>
 								</span>
-								
+
 							</span>
 						</a>
 						<div class="home-projects__tabs show_site">
@@ -328,6 +330,26 @@ get_header(); // подключаем header.php ?>
 			</div>
 		</div>
 	</div>
+
+	<!-- open .section home-order -->
+	<div class="section home-order">
+		<!-- open .intro -->
+		<div class="intro">
+			<!-- open .container -->
+			<div class="container">
+				<!-- open .home-order__box -->
+				<div class="home-order__box">
+					<h2>ЗАКАЖИТЕ <span>БЕСПЛАТНО</span> РАЗРАБОТКУ ПРОТОТИПА</h2>
+					<a href="#" class="home-order_btn"><span>Оформить заказ</span></a>
+					<small>Далеко-далеко за словесными горами в стране.</small>
+				</div>
+				<!-- close .home-order__box -->
+			</div>
+			<!-- close .container -->
+		</div>
+		<!-- close .intro -->
+	</div>
+	<!-- close .section home-order -->
 </div>
 
 <?php get_footer(); // подключаем footer.php ?>

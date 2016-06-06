@@ -132,12 +132,26 @@
 			width: 100%;
 		}
 		h2 {
+
 			text: #251c1d uppercase 50px;
 			letter-spacing: 5px;
 			word-spacing: 10px;
 			text-align: right;
 			margin-top: 200px;
 			margin-bottom: 50px;
+		}
+		h3{
+			float: left;
+			width: 100%;
+			font-family: $b;
+			text: $base uppercase 30px;
+			margin-bottom: 15px;
+		}
+		p{
+			float: left;
+			text: $base 18px;
+			width: 100%;
+			margin: 5px 0;
 		}
 		&_mockup {
 			position: absolute;
@@ -699,6 +713,35 @@
 					}
 			    }
 			}
+	}
+	&-order {
+		background-image: url('../img/content-management-system-services.jpg');
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+		background-position: 50% 50%;
+		&__box {
+			float: left;
+			width: 40%;
+			h2 {
+				font-family: $bl;
+				text: $base uppercase 75px 1;
+				text-shadow: 0px 0px 3px #fff;
+				span {
+					color: $blue;
+				}
+			}
+		}
+		&_btn {
+			@extend .home-steps__item_description_btn;
+		}
+		small {
+			float: left;
+			margin-top: 25px;
+			font-family: $l;
+			text: $base 10px;
+		}
 	}
 }
 

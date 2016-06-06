@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 		sectionsColor: [],
 		navigation: true,
 		navigationPosition: 'left',
-		responsive: 1400,
+		responsive: 1024,
 
 	});
 

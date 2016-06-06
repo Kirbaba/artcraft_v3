@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 		sectionsColor: [],
 		navigation: true,
 		navigationPosition: 'left',
-		responsive: 1400,
+		responsive: 1024,
 
 	});
 
@@ -110,7 +110,7 @@ jQuery(document).ready(function($) {
       }
     },
     "line_linked": {
-      "enable": true,
+      "enable": false,
       "distance": 150,
       "color": "#ffffff",
       "opacity": 0.4,
@@ -118,7 +118,7 @@ jQuery(document).ready(function($) {
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 3,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -135,11 +135,11 @@ jQuery(document).ready(function($) {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "repulse"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "resize": true
@@ -181,6 +181,18 @@ jQuery(document).ready(function($) {
 
 
 
+jQuery(document).ready(function($) {
+	$(".home-projects__nav_btn").click(function(event) {
+		event.preventDefault();
+		$('.home-projects__nav_btn').each(function(){
+			$(this).removeClass('home-projects__nav_btn_active');
+		});
+		$(this).addClass('home-projects__nav_btn_active');
+		var target = ($(this).data('activity'));
+		$('.home-projects__tabs').hide();
+		$("." + target).css("display","flex");
+	});
+});
 
 document.addEventListener("DOMContentLoaded", ready);
 function ready() {

@@ -22,7 +22,10 @@
 } */
 
 #fp-nav.left {
-    left: 100px;
+    left: 50px;
+    @include respondTo(largeScreen){
+		left: 100px;
+    }
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {

@@ -169,23 +169,38 @@ get_header(); // подключаем header.php ?>
 					<div class="home-projects__flex">
 						<a href="#" class="home-projects__more">
 							<img src="<?php bloginfo('template_directory'); ?>/img/portfolio_0.png" alt="" />
-							<span class="home-projects__more_type">яркий дизайн</span>
-							<span>больше работ</span>
+							<span class="home-projects__more_hover">
+								<span class="home-projects__more_hover_box">
+									<span class="home-projects__more_type">яркий дизайн</span>
+									<span class="home-projects__more_btn"><span>больше работ</span></span>
+								</span>
+								
+							</span>
 						</a>
+						<!-- open .home-projects__more_diamond -->
+						<div class="home-projects__more_diamond">
+							<img src="<?php bloginfo('template_directory'); ?>/img/diamond.png" alt="" />
+						</div>
+						<!-- close .home-projects__more_diamond -->
 						<a href="#" class="home-projects__more">
 							<img src="<?php bloginfo('template_directory'); ?>/img/portfolio_1.png" alt="" />
-							<span class="home-projects__more_type">яркий дизайн</span>
-							<span>больше работ</span>
+							<span class="home-projects__more_hover">
+								<span class="home-projects__more_hover_box">
+									<span class="home-projects__more_type">сайт под ключ</span>
+									<span class="home-projects__more_btn"><span>больше работ</span></span>
+								</span>
+								
+							</span>
 						</a>
 						<div class="home-projects__tabs show_site">
 								<a href="#" class="home-projects__tabs_item">
-									<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+									<img src="<?php bloginfo('template_directory'); ?>/img/sites.jpg" alt="" />
 								</a>
 								<a href="#" class="home-projects__tabs_item">
-									<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+									<img src="<?php bloginfo('template_directory'); ?>/img/sites.jpg" alt="" />
 								</a>
 								<a href="#" class="home-projects__tabs_item">
-									<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+									<img src="<?php bloginfo('template_directory'); ?>/img/sites.jpg" alt="" />
 								</a>
 						</div>
 						<div class="home-projects__tabs show_design">
@@ -201,25 +216,25 @@ get_header(); // подключаем header.php ?>
 						</div>
 						<div class="home-projects__tabs show_smm">
 							<a href="#" class="home-projects__tabs_item">
-								<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+								<img src="<?php bloginfo('template_directory'); ?>/img/ssm.jpg" alt="" />
 							</a>
 							<a href="#" class="home-projects__tabs_item">
-								<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+								<img src="<?php bloginfo('template_directory'); ?>/img/ssm.jpg" alt="" />
 							</a>
 							<a href="#" class="home-projects__tabs_item">
-								<img src="<?php bloginfo('template_directory'); ?>/img/design_thumb.png" alt="" />
+								<img src="<?php bloginfo('template_directory'); ?>/img/ssm.jpg" alt="" />
 							</a>
 						</div>
 						<nav class="home-projects__nav">
 							<ul>
 								<li>
-									<a href="#" class="home-projects__nav_btn home-projects__nav_btn_active" data-activity="show_site">РАЗРАБОТКА САЙТА</a>
+									<a href="#" class="home-projects__nav_btn home-projects__nav_btn_active" data-activity="show_site"><span>РАЗРАБОТКА САЙТА</span></a>
 								</li>
 								<li>
-									<a href="#" class="home-projects__nav_btn" data-activity="show_design">ДИЗАЙН</a>
+									<a href="#" class="home-projects__nav_btn" data-activity="show_design"><span>ДИЗАЙН</span></a>
 								</li>
 								<li>
-									<a href="#" class="home-projects__nav_btn" data-activity="show_smm">SMM</a>
+									<a href="#" class="home-projects__nav_btn" data-activity="show_smm"><span>SMM</span></a>
 								</li>
 							</ul>
 						</nav>

@@ -47,7 +47,7 @@
 $smartphone: 736px;
 $tabletPortrait: 768px;
 $tabletLandscape: 1024px;
-$desktop: 1174px;
+$desktop: 1300px;
 $largeScreen: 1400px;
 @mixin respondTo($media) {
   @if $media == smartphone {

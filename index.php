@@ -8,6 +8,37 @@ get_header(); // подключаем header.php ?>
 
 <div id="fullpage">
 	<div class="section home-banner" id="banner">
+		<!-- open .navigation -->
+		<nav class="navigation">
+			<!-- open .container -->
+			<div class="container">
+				<!-- open .navigation__logo -->
+				<div class="navigation__logo">
+					<h3>ART CRAFT</h3>
+				</div>
+				<!-- close .navigation__logo -->
+				<ul class="navigation__menu">
+					<li data-menuanchor="secondPage"><a href="#" id="moveToTop">Главная</a></li>
+					<li data-menuanchor="firstPage"><a href="#nowhere" id="moveToProjects">Проекты</a></li>
+					<li data-menuanchor="secondPage"><a href="#nowhere"  id="moveToAbout">О нас</a></li>
+				</ul>
+
+				<!-- open .navigation__lang -->
+				<div class="navigation__lang">
+					<a href="#nowhere" class="navigation__lang_active">ru </a>
+					<!-- open .navigation__lang -->
+					<ul class="navigation__lang_list">
+						<li><a href="#nowhere" class="navigation__lang_val" data-lang="en">en</a></li>
+						<li><a href="#nowhere" class="navigation__lang_val" data-lang="ru">ru</a></li>
+					</ul>
+					<!-- close .navigation__lang -->
+				</div>
+				<!-- close .navigation__lang -->
+
+			</div>
+			<!-- close .container -->
+		</nav>
+		<!-- close .navigation -->
 		<!-- open .container -->
 		<div class="container">
 			<!-- open .home-banner_title -->
@@ -70,7 +101,7 @@ get_header(); // подключаем header.php ?>
 			<!-- close .home-partners_carousel -->
 			<h3>Далеко-далеко за словесными.</h3>
 			<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами, дал осталось вскоре заманивший.</p>
-			<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Встретил осталось они дал, коварный выйти запятых возвращайся переписали гор.</p>	
+			<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Встретил осталось они дал, коварный выйти запятых возвращайся переписали гор.</p>
 		</div>
 	 	<img class="home-partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mac-mocup.png" alt="" />
 

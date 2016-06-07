@@ -1,11 +1,11 @@
 .navigation {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
 	z-index: 9999;
 	color: #FFF;
-	ul {
+	&__menu {
 		float: left;
 		li {
 			float: left;
@@ -23,6 +23,48 @@
 			font-family: $b;
 			text: uppercase 36px;
 			float: left;
+		}
+	}
+	&__lang {
+		float:right;
+		width: 40px;
+		margin: 20px 0;
+		&_active {
+			position: relative;
+			float: left;
+			width: 100%;
+			padding-left: 5px;
+			font-family: $b;
+			text: #fff uppercase 15px;
+			&:after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				border-top: 5px solid #fff;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+			}
+		}
+		&_list {
+			display: none;
+			padding: 0;
+			li {
+					float: left;
+					width: 100%;
+					margin: 0;
+					a {
+						padding-left: 5px;
+						float: left;
+						width: 100%;
+						font-family: $b;
+						text: #fff uppercase 15px;
+						&:hover, &:focus {
+							background-color: $blue;
+						}
+					}
+			}
 		}
 	}
 }

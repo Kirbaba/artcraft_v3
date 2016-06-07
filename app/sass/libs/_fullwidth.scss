@@ -22,9 +22,12 @@
 } */
 
 #fp-nav.left {
-    left: 50px;
+    left: 30px;
     @include respondTo(largeScreen){
 		left: 100px;
+    }
+    @include respondTo(desctop){
+		left: 50px;
     }
 }
 

@@ -5,8 +5,9 @@ jQuery(document).ready(function($) {
 		navigationPosition: 'left',
 		responsive: 1024,
 		menu: '#navmenu',
-		hideScrollbars: false,
-		fadeScrollbars: false,
+		hideScrollbars: true,
+		fadeScrollbars: true,
+		loopBottom: true,
 
 	});
 

@@ -5,8 +5,9 @@ jQuery(document).ready(function($) {
 		navigationPosition: 'left',
 		responsive: 1024,
 		menu: '#navmenu',
-		hideScrollbars: false,
-		fadeScrollbars: false,
+		hideScrollbars: true,
+		fadeScrollbars: true,
+		loopBottom: true,
 
 	});
 
@@ -207,6 +208,18 @@ jQuery(document).ready(function($) {
 		$('.home-projects__tabs').hide();
 		$("." + target).css("display","flex");
 	});
+});
+jQuery(document).ready(function($) {
+  $('.navigation__lang_active').on("click", function(event) {
+		event.preventDefault();	
+    $('.navigation__lang_list').slideToggle();
+  });
+  $('.navigation__lang_val').on("click", function(event) {
+  		event.preventDefault();	
+  		var lang = $(this).text();
+  		$('.navigation__lang_active').text(lang);
+  		$('.navigation__lang_list').slideUp();
+  });
 });
 
 document.addEventListener("DOMContentLoaded", ready);

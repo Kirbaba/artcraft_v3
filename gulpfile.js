@@ -7,8 +7,9 @@ var gulp = require('gulp'), // Подключаем Gulp
     del = require('del'), // Подключаем библиотеку для удаления файлов и папок
     imagemin = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
     pngquant = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
-    cache = require('gulp-cache'); // Подключаем библиотеку кеширования
-    //autoprefixer = require('gulp-autoprefixer'); // Подключаем библиотеку для автоматического добавления префиксов
+    cache = require('gulp-cache'), // Подключаем библиотеку кеширования
+    sourcemaps = require('gulp-sourcemaps'),
+    rimraf = require('rimraf');
 
     var postcss = require('gulp-postcss');
 
@@ -18,11 +19,9 @@ var gulp = require('gulp'), // Подключаем Gulp
     var short = require('postcss-short');
     var stylefmt = require('stylefmt');
     var assets  = require('postcss-assets');
-    var shortspacing = require('postcss-short-spacing')
-    // var stylelint = require('stylelint');
-    // var reporter = require('postcss-reporter');
+    var shortspacing = require('postcss-short-spacing');
 
-gulp.task('css-libs', function() { // Создаем таск Sass
+gulp.task('css-libs', function() { 
     var processors = [
         cssnano
     ]
@@ -34,10 +33,10 @@ gulp.task('css-libs', function() { // Создаем таск Sass
         ]) // Берем источник
         .pipe(postcss(processors))
         .pipe(concat('libs.min.css'))
-        .pipe(gulp.dest('css')) // Выгружаем результата в папку app/css
+        .pipe(gulp.dest('css')) 
         .pipe(browserSync.reload({
             stream: true
-        })) // Обновляем CSS на странице при изменении
+        })) 
 });
 
 gulp.task('js-libs', function() {
@@ -64,35 +63,37 @@ gulp.task('sass', function() { // Создаем таск Sass
         cssnano
     ];
     return gulp.src('app/sass/**/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(rename({
             suffix: ".min",
             extname: ".css"
         }))
+        .pipe(sourcemaps.write('.', { sourceRoot: 'css-source' }))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
         }));
 });
 
-gulp.task('browser-sync', function() { // Создаем таск browser-sync
-    browserSync({ // Выполняем browserSync
+gulp.task('browser-sync', function() { 
+    browserSync({ 
         proxy: {
-            target: 'artcraft.loc' // Директория для сервера - app
+            target: 'artcraft.loc'
         },
         ghostMode: {
             clicks: true,
             forms: true,
             scroll: true
         },
-        notify: false // Отключаем уведомления
+        notify: false 
     });
 });
 
 gulp.task('img', function() {
-    return gulp.src('app/img/**/*') // Берем все изображения из app
-        .pipe(cache(imagemin({ // Сжимаем их с наилучшими настройками с учетом кеширования
+    return gulp.src('app/img/**/*')
+        .pipe(cache(imagemin({
             interlaced: true,
             progressive: true,
             svgoPlugins: [{
@@ -106,10 +107,22 @@ gulp.task('img', function() {
         }));
 });
 
-gulp.task('compress', function() {
+gulp.task('compress', ['clean'], function() {
   return gulp.src('app/js/*.js')
+    .pipe(sourcemaps.init())
     .pipe(concat('script.js'))
+    .pipe(rename({
+        suffix: ".min",
+        extname: ".js"
+    }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('', { sourceRoot: 'js-source' }))
     .pipe(gulp.dest('js'));
+
+});
+
+gulp.task("clean", function (cb) {
+    rimraf('./js/script.min.js', cb);
 });
 
 gulp.task('watch', ['browser-sync'],  function() {

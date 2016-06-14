@@ -9,15 +9,23 @@
 		float: left;
 		li {
 			float: left;
-			margin: 0 15px;
+			margin: 0 25px;
 			a {
-				font-family: $b;
+				font-family: $m;
 				text: #fff uppercase 15px;
+				letter-spacing: 2px;
 			}
 		}
 	}
 	&__logo {
 		float: left;
+		margin-top: 10px;
+		margin-right: 15px;
+		svg {
+			float: left;
+			width: 250px;
+			height: auto;
+		}
 		h3 {
 			margin: 0;
 			font-family: $b;

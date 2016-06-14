@@ -79,7 +79,7 @@ function add_scripts() { // добавление скриптов
 
 
     wp_enqueue_script('easings', get_template_directory_uri().'/js/jquery.easings.min.js','','',true);
-    wp_enqueue_script('fullPage', get_template_directory_uri().'/js/jquery.fullPage.min.js','','',true);
+    // wp_enqueue_script('fullPage', get_template_directory_uri().'/js/jquery.fullPage.min.js','','',true);
     wp_enqueue_script('simmScroll', get_template_directory_uri().'/js/jquery.slimscroll.min.js','','',true);
     wp_enqueue_script('owl', get_template_directory_uri().'/js/owl.carousel.min.js','','',true);
     wp_enqueue_script('parallax', get_template_directory_uri().'/js/parallax.min.js','','',true);
@@ -88,7 +88,7 @@ function add_scripts() { // добавление скриптов
     wp_enqueue_script('particles',  get_template_directory_uri().'/js/particles.min.js','','', true);
 
 
-    wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.js','','',true); // бутстрап
+    wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.min.js','','',true); // бутстрап
     wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
 	wp_localize_script('main', 'myajax',
 		array(

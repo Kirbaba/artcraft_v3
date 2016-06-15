@@ -84,10 +84,13 @@
 		padding-right: 0;
 	}
 	.home-steps__item {
-		padding-bottom: 125px;
+		padding-bottom: 50px;
 	}
 	.home-order_btn, .home-steps__item_description_btn {
 		width: 100%;
+	}
+	.home-steps__item_description {
+		height: auto;
 	}
 }
 
@@ -126,6 +129,9 @@
 	}
 	.home-order__box {
 		width: 50%;
+	}
+	.home-projects__more_btn {
+		width: 60%;
 	}
 }
 

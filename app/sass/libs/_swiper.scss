@@ -5,3 +5,15 @@
 .home-steps__pagination-white {
     background: #251c1d;
 }
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+	margin-top: 15px;
+	bottom: 0;
+}
+
+.swiper-pagination-bullet {
+	size: 12px;
+}
+
+
+

@@ -24,9 +24,9 @@ get_header(); // подключаем header.php ?>
 				</div>
 				<!-- close .navigation__logo -->
 				<ul class="navigation__menu">
-					<li data-menuanchor="secondPage"><a href="#" id="moveToTop">Главная</a></li>
-					<li data-menuanchor="firstPage"><a href="#nowhere" id="moveToProjects">Проекты</a></li>
-					<li data-menuanchor="secondPage"><a href="#nowhere"  id="moveToAbout">О нас</a></li>
+					<li><a href="/" id="moveToTop">Главная</a></li>
+					<li><a data-scroll href="#moveto_projects">Проекты</a></li>
+					<li><a data-scroll href="#moveto_about">О нас</a></li>
 				</ul>
 
 				<!-- open .navigation__lang -->
@@ -52,16 +52,16 @@ get_header(); // подключаем header.php ?>
 				<!-- open .home-banner_rectangle -->
 				<h2 class="home-banner_text" >ART CRAFT</h2>
 				<div   class="home-banner_rectangle">
-						<img class="home-banner_interface" src="<?php bloginfo('template_directory'); ?>/img/interface.png" alt="" />
+					<img class="home-banner_interface" src="<?php bloginfo('template_directory'); ?>/img/interface.png" alt="" />
 				</div>
 				<!-- close .home-banner_rectangle -->
 				<!-- close .home-banner_title -->
 				<!-- open .home-banner_desc -->
 				<h3 class="home-banner_desc">DESIGN & WEB</h3>
 				<!-- close .home-banner_desc -->
-				<div class="mouse animated fadeInUp" data-top=" opacity:1;  " data-top-bottom=" opacity:0; " data-anchor-target="header">
+				<a data-scroll href="#moveto_about" class="mouse animated fadeInUp" data-top=" opacity:1;  " data-top-bottom=" opacity:0; " data-anchor-target="header">
 					<div class="scroll"></div>
-				</div>
+				</a>
 			</div>
 			<a href="#" class="home-banner_btn btn-1">
 				<svg>
@@ -76,7 +76,7 @@ get_header(); // подключаем header.php ?>
 <!-- open .particles -->
 <div class="box-part" id="particles-js">
 	<div ></div>
-	<div class="home-partners" id="home-partners">
+	<div class="home-partners" id="moveto_about">
 		<!-- open .container -->
 		<div class="container">
 			<h2>С нами работают</h2>
@@ -204,7 +204,7 @@ get_header(); // подключаем header.php ?>
 	</div>
 </div>
 
-	<div class="section home-projects" id="home-projects">
+	<div class="section home-projects" id="moveto_projects">
 		<div class="intro">
 				<div class="container">
 					<h2>ПРОЕКТЫ</h2>
@@ -346,7 +346,7 @@ get_header(); // подключаем header.php ?>
 							<div class="home-steps__item_description">
 								<!-- open .flexw -->
 								<div class="flexw">
-									<h3 class="home-steps__item_description_title" data-swiper-parallax="-100">ПРОГРАММИРОВАНИЕ И  br<strong>ВЕРСТКА</strong> <span>03</span></h3>
+									<h3 class="home-steps__item_description_title" data-swiper-parallax="-100">ПРОГРАММИРОВАНИЕ И <strong>ВЕРСТКА</strong> <span>03</span></h3>
 									<div class="home-steps__item_description_text" data-swiper-parallax="-300">
 										<p>Лендинг - это круглосуточный менеджер продаж вашей
 											компании. Естественно. если у менеджера продаж правый

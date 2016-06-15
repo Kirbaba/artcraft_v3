@@ -2,22 +2,24 @@
 	&-banner {
 		background-image: url('../img/first-bg.png');
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: 50% 100%;
 		-webkit-background-size: cover;
 		     -o-background-size: cover;
 		        background-size: cover;
 		float: left;
 		width: 100%;
 		height: 100vh;
+		padding-bottom: 70vh;
 		position: relative;
+		z-index: 2;
 		&_title {
 			display: block;
 			position: relative;
 			margin: 150px auto 150px;
 			width: 100%;
-			height: 270px;
+			height: 270px;			
 			@include respondTo(largeScreen) {
-				margin: 250px auto 100px;
+				margin: 350px auto 100px;
 			}
 			h2 {
 				position: absolute;
@@ -33,6 +35,10 @@
 				   -moz-user-select: none;
 				    -ms-user-select: none;
 				        user-select: none;
+				@include respondTo(tablet) {
+					font-size: 85px;
+					left: 18%;
+				}
  			}
 		}
 		&_interface {
@@ -134,12 +140,13 @@
 		position: relative;
 		float: left;
 		width: 100%;
-		background-image: url('../img/secondt-bg.png');
+		/* background-image: url('../img/secondt-bg.png'); */
 		background-repeat: no-repeat;
 		background-size: 100%;
 		background-position: 50% -30%;
 		-ms-overflow-x: hidden;
 		    overflow-x: hidden;
+		z-index: 2;		
 		.fp-tableCell {
 			display: block;
 			float: left;
@@ -337,11 +344,6 @@
 		width: 100%;
 		position: relative;
 		padding: 50px 0;
-		/* .fp-tableCell {
-			display: block;
-			float: left;
-			width: 100%;
-		} */
 		z-index: 9999;
 		&__title {
 			float: left;
@@ -443,7 +445,7 @@
 					overflow: hidden;
 					position: relative;
 					height: 60px;
-					line-height: 56px;
+					line-height: 50px;
 					margin: 0;
 					float: none;
 					@include transition(.2s);

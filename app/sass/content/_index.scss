@@ -17,7 +17,7 @@
 			position: relative;
 			margin: 150px auto 150px;
 			width: 100%;
-			height: 270px;			
+			height: 270px;
 			@include respondTo(largeScreen) {
 				margin: 350px auto 100px;
 			}
@@ -146,22 +146,21 @@
 		background-position: 50% -30%;
 		-ms-overflow-x: hidden;
 		    overflow-x: hidden;
-		z-index: 2;		
+		z-index: 2;
 		.fp-tableCell {
 			display: block;
 			float: left;
 			width: 100%;
 		}
 		h2 {
-
 			text: #251c1d uppercase 40px;
 			letter-spacing: 5px;
 			word-spacing: 10px;
 			text-align: right;
-			margin-top: 150px;
-    		margin-bottom: 15px;
-    		@include respondTo(largeScreen) {
-				margin-top: 200px;
+			margin-top: 125px;
+    	margin-bottom: 15px;
+    	@include respondTo(largeScreen) {
+					margin-top: 150px;
     			margin-bottom: 50px;
 			}
 		}
@@ -181,7 +180,7 @@
 		&_mockup {
 			position: absolute;
 			left: 5%;
-			top: 50px;
+			top: 0;
 			z-index: 10;
 			width: 35%;
 		}
@@ -191,7 +190,7 @@
 			box-sizing: border-box;
 			padding: 0 50px;
 			&_item {
-				height: 250px;
+				height: 200px;
 				position: relative;
 				img {
 					object-fit: contain;
@@ -531,7 +530,7 @@
 		    margin: 5px 0;
 		    @include transition(.3s);
 		    @include respondTo(largeScreen){
-		     	height: 320px;			     	
+		     	height: 320px;
 		    }
 		    &_diamond {
 		    	size: 60px;
@@ -661,7 +660,7 @@
 		    -webkit-justify-content: space-between;
 		            justify-content: space-between;
 		    width: 100%;
-		   
+
 		    margin: 5px 0;
 		    &_item {
 		    	-webkit-flex-basis: 32.8%;
@@ -671,7 +670,7 @@
 		         background-color: $base;
 		         img {
 		         	@include transition(.3s);
-		         	
+
 		         }
 		         &:hover {
 		         	img {
@@ -703,7 +702,7 @@
 		    		width: 1 / 3 * 100%;
 		    		a {
 		    			position: relative;
-		    		}	
+		    		}
 		    	}
 		    }
 		    &_btn {
@@ -720,7 +719,7 @@
 				&:hover {
 					font-family: $m;
 					background-color: lighten(#080001,10%);
-				} 
+				}
 				&_active {
 					background-color: $blue;
 					&:hover {

@@ -79,11 +79,10 @@ function add_scripts() { // добавление скриптов
 
 
     wp_enqueue_script('easings', get_template_directory_uri().'/js/jquery.easings.min.js','','',true);
-    // wp_enqueue_script('fullPage', get_template_directory_uri().'/js/jquery.fullPage.min.js','','',true);
-    wp_enqueue_script('simmScroll', get_template_directory_uri().'/js/jquery.slimscroll.min.js','','',true);
+    /*wp_enqueue_script('simmScroll', get_template_directory_uri().'/js/jquery.slimscroll.min.js','','',true);*/
     wp_enqueue_script('owl', get_template_directory_uri().'/js/owl.carousel.min.js','','',true);
-    wp_enqueue_script('smoothscrall', get_template_directory_uri().'/js/smooth-scroll.min.js','','',true);
-    wp_enqueue_script('parallax', get_template_directory_uri().'/js/parallax.min.js','','',true);
+    /*wp_enqueue_script('smoothscrall', get_template_directory_uri().'/js/smooth-scroll.min.js','','',true);
+    wp_enqueue_script('parallax', get_template_directory_uri().'/js/parallax.min.js','','',true);*/
     wp_enqueue_script('swiper', get_template_directory_uri().'/js/swiper.min.js','','',true);
     wp_enqueue_script('modernizr', get_template_directory_uri().'/js/modernizr.js','','');
     wp_enqueue_script('particles',  get_template_directory_uri().'/js/particles.min.js','','', true);
@@ -102,9 +101,7 @@ add_action('wp_print_styles', 'add_styles'); // приклеем ф-ю на до
 function add_styles() { // добавление стилей
     if(is_admin()) return false; // если мы в админке - ничего не делаем
     wp_enqueue_style( 'libs', get_template_directory_uri().'/css/libs.min.css' );// Нормалайз
-    wp_enqueue_style( 'fullPage', get_template_directory_uri().'/css/jquery.fullPage.min.css' );
     wp_enqueue_style( 'swiper', get_template_directory_uri().'/css/swiper.min.css' );
-    /*wp_enqueue_style( 'parallax', get_template_directory_uri().'/css/mouseparallax.css' );*/
     wp_enqueue_style( 'custom-styles', get_template_directory_uri().'/css/style.min.css' );
 	wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); // основные стили шаблона
 }

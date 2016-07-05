@@ -9,7 +9,7 @@
 		float: left;
 		width: 100%;
 		height: 100vh;
-		padding-bottom: 70vh;
+		padding-bottom: 60vh;
 		position: relative;
 		z-index: 2;
 		&_title {
@@ -144,8 +144,8 @@
 		background-repeat: no-repeat;
 		background-size: 100%;
 		background-position: 50% -30%;
-		-ms-overflow-x: hidden;
-		    overflow-x: hidden;
+		/* -ms-overflow-x: hidden;
+		    overflow-x: hidden; */
 		z-index: 2;
 		.fp-tableCell {
 			display: block;
@@ -177,12 +177,41 @@
 			width: 100%;
 			margin: 5px 0;
 		}
+		&__shares {
+			float: right;
+			width: 50%;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding-left: 25px;
+			&_icon {
+				float: left;
+				width: 30%;
+			}
+			&_desc {
+				width: 70%;
+				float: left;
+				h3 {
+					text: #251c1d 25px;
+					margin-top: 0;
+					strong {
+						display: block;
+						text: $blue 32px;
+					}
+				}
+				&_btn {
+					@extend %blue_btn;
+					font-size: 25px;
+					width: 100%;
+				}
+			}
+		}
 		&_mockup {
 			position: absolute;
 			left: 5%;
 			top: 0;
 			z-index: 10;
-			width: 35%;
+			width: 45%;
 		}
 		&_carousel {
 			width: 65%;
@@ -326,11 +355,20 @@
 				}
 			}
 		}
+		&_price {
+			margin-top: 15px;
+			margin-bottom: 5px;
+			text: $base right 23px;
+			strong {
+				font-family: $b;
+				text: $blue 28px;
+			}
+		}
 		&_list {
 			float: left;
 			width: 100%;
 			padding: 0;
-			li {
+			li {				
 				text: #251c1d uppercase 16px;
 				margin-bottom: 15px;
 				pointer-events: initial;
@@ -531,6 +569,17 @@
 		    @include transition(.3s);
 		    @include respondTo(largeScreen){
 		     	height: 320px;
+		    }
+		    &_line {
+		    	float: left;
+		    	width: 100%;
+		    	display: flex;
+		    	-webkit-flex-wrap: wrap;
+		    	    -ms-flex-wrap: wrap;
+		    	        flex-wrap: wrap;
+		    	    -webkit-flex-direction: row;
+		    	        -ms-flex-direction: row;
+		    	            flex-direction: row;
 		    }
 		    &_diamond {
 		    	size: 60px;

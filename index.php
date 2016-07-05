@@ -22,6 +22,11 @@ get_header(); // подключаем header.php ?>
 					  <path class="st1" d="M-262.3 355h16.1v2.7h-16.1z"/>
 					</svg>
 				</div>
+				<!-- open .navigation__menu_toggle -->
+				<a href="#" class="navigation__menu_toggle">
+					<span></span>
+				</a>
+				<!-- close .navigation__menu_toggle -->
 				<!-- close .navigation__logo -->
 				<ul class="navigation__menu">
 					<li><a href="/" id="moveToTop">Главная</a></li>
@@ -79,41 +84,32 @@ get_header(); // подключаем header.php ?>
 	<div class="home-partners" id="moveto_about">
 		<!-- open .container -->
 		<div class="container">
-			<h2>С нами работают</h2>
-			<!-- open .home-partners_carousel -->
-			<div class="home-partners_carousel">
-				<!-- open .home-partners_carousel_item -->
-				<div class="home-partners_carousel_item">
-					<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" />
+			<h2>Акции и скидки</h2>
+			<!-- open .home-partners__shares -->
+			<div class="home-partners__shares">
+				<!-- open .home-partners__shares_icon -->
+				<div class="home-partners__shares_icon">
+					<img src="<?php bloginfo('template_directory'); ?>/img/tree.png" alt="" />
 				</div>
-				<!-- close .home-partners_carousel_item -->
-				<!-- open .home-partners_carousel_item -->
-				<div class="home-partners_carousel_item">
-					<img src="<?php bloginfo('template_directory'); ?>/img/logo1.png" alt="" />
+				<!-- close .home-partners__shares_icon -->
+				<!-- open .home-partners__shares_desc -->
+				<div class="home-partners__shares_desc">
+					<h3>
+						ЗАКАЖИ БЫСТРЕЕ 
+						<strong>ПО ЦЕНЕ 2Х!</strong> 
+						Вот это, я понимаю, 
+						<strong>скидка!</strong>
+					</h3>	
+					<a href="#" class="home-partners__shares_desc_btn"><span>Хочу участвовать</span></a>
 				</div>
-				<!-- close .home-partners_carousel_item -->
-				<!-- open .home-partners_carousel_item -->
-				<div class="home-partners_carousel_item">
-					<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" />
-				</div>
-				<!-- close .home-partners_carousel_item -->
-				<!-- open .home-partners_carousel_item -->
-				<div class="home-partners_carousel_item">
-					<img src="<?php bloginfo('template_directory'); ?>/img/logo1.png" alt="" />
-				</div>
-				<!-- close .home-partners_carousel_item -->
-				<!-- open .home-partners_carousel_item -->
-				<div class="home-partners_carousel_item">
-					<img src="<?php bloginfo('template_directory'); ?>/img/logo2.png" alt="" />
-				</div>
-				<!-- close .home-partners_carousel_item -->
+				<!-- close .home-partners__shares_desc -->
+				
 			</div>
-			<!-- close .home-partners_carousel -->
-			<h3>Далеко-далеко за словесными.</h3>
-			<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами, дал осталось вскоре заманивший.</p>
-			<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Встретил осталось они дал, коварный выйти запятых возвращайся переписали гор.</p>
+			<!-- close .home-partners__shares -->
+
 		</div>
-	 	<img class="home-partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mac-mocup.png" alt="" />
+	 	<img class="home-partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mockups_works-1.png
+	 	" alt="" />
 
 	</div>
 
@@ -137,7 +133,11 @@ get_header(); // подключаем header.php ?>
 						<h4>СТРАТЕГИЯ</h4>
 					</div>
 					<!-- close .home-services_title -->
-
+					<!-- open .home-services_price -->
+					<h5 class="home-services_price">
+						от <strong>X XXX</strong> ₽
+					</h5>
+					<!-- close .home-services_price -->
 					<!-- open .home-services_list -->
 					<ul class="home-services_list">
 						<li>аудит сайта</li>
@@ -160,6 +160,11 @@ get_header(); // подключаем header.php ?>
 						<h4>ДИЗАЙН</h4>
 					</div>
 					<!-- close .home-services_title -->
+					<!-- open .home-services_price -->
+					<h5 class="home-services_price">
+						от <strong>X XXX</strong> ₽
+					</h5>
+					<!-- close .home-services_price -->
 					<!-- open .home-services_list -->
 					<ul class="home-services_list">
 						<li>Прототипы</li>
@@ -184,6 +189,11 @@ get_header(); // подключаем header.php ?>
 						<h4>разработка</h4>
 					</div>
 					<!-- close .home-services_title -->
+					<!-- open .home-services_price -->
+					<h5 class="home-services_price">
+						от <strong>X XXX</strong> ₽
+					</h5>
+					<!-- close .home-services_price -->
 					<!-- open .home-services_list -->
 					<ul class="home-services_list">
 						<li>Техническое задание</li>
@@ -210,31 +220,36 @@ get_header(); // подключаем header.php ?>
 					<h2>ПРОЕКТЫ</h2>
 					<h4>В данном разделе представлены только избранные проекты нашей компании за период с 2004 года.</h4>
 					<div class="home-projects__flex">
-						<a href="#" class="home-projects__more">
-							<img src="<?php bloginfo('template_directory'); ?>/img/portfolio_0.png" alt="" />
-							<span class="home-projects__more_hover">
-								<span class="home-projects__more_hover_box">
-									<span class="home-projects__more_type">яркий дизайн</span>
-									<span class="home-projects__more_btn"><span>больше работ</span></span>
-								</span>
+						<!-- open .home-projects__more_line -->
+						<div class="home-projects__more_line">
+							<!-- close .home-projects__more_line -->
+							<a href="#" class="home-projects__more">
+								<img src="<?php bloginfo('template_directory'); ?>/img/portfolio_0.png" alt="" />
+								<span class="home-projects__more_hover">
+									<span class="home-projects__more_hover_box">
+										<span class="home-projects__more_type">яркий дизайн</span>
+										<span class="home-projects__more_btn"><span>больше работ</span></span>
+									</span>
 
-							</span>
-						</a>
-						<!-- open .home-projects__more_diamond -->
-						<div class="home-projects__more_diamond">
-							<img src="<?php bloginfo('template_directory'); ?>/img/diamond.png" alt="" />
+								</span>
+							</a>
+							<!-- open .home-projects__more_diamond -->
+							<div class="home-projects__more_diamond">
+								<img src="<?php bloginfo('template_directory'); ?>/img/diamond.png" alt="" />
+							</div>
+							<!-- close .home-projects__more_diamond -->
+							<a href="#" class="home-projects__more">
+								<img src="<?php bloginfo('template_directory'); ?>/img/portfolio_1.png" alt="" />
+								<span class="home-projects__more_hover">
+									<span class="home-projects__more_hover_box">
+										<span class="home-projects__more_type">сайт под ключ</span>
+										<span class="home-projects__more_btn"><span>больше работ</span></span>
+									</span>
+
+								</span>
+							</a>	
 						</div>
-						<!-- close .home-projects__more_diamond -->
-						<a href="#" class="home-projects__more">
-							<img src="<?php bloginfo('template_directory'); ?>/img/portfolio_1.png" alt="" />
-							<span class="home-projects__more_hover">
-								<span class="home-projects__more_hover_box">
-									<span class="home-projects__more_type">сайт под ключ</span>
-									<span class="home-projects__more_btn"><span>больше работ</span></span>
-								</span>
-
-							</span>
-						</a>
+						
 						<div class="home-projects__tabs show_site">
 								<a href="#" class="home-projects__tabs_item">
 									<img src="<?php bloginfo('template_directory'); ?>/img/sites.jpg" alt="" />

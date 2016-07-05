@@ -7,7 +7,8 @@
 	z-index: 9999;
 	color: #FFF;
 	&__menu {
-		float: left;
+		float: right;
+		/* float: left; */
 		li {
 			float: left;
 			margin: 0 25px;
@@ -15,6 +16,57 @@
 				font-family: $m;
 				text: #fff uppercase 15px;
 				letter-spacing: 2px;
+			}
+		}
+		&_toggle {
+			float: right;
+			size: 45px 35px;
+			position: relative;
+			margin-top: 5px;
+			display: none;
+			span {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				size: 100% 4px;
+				-webkit-border-radius: 2px;
+				        border-radius: 2px;
+				background-color: #FFF;
+				margin-top: -2px;
+				@include transition(.4s);
+			}
+			&:before, &:after {
+				content: "";
+				position: absolute;
+				size: 100% 4px;
+				-webkit-border-radius: 2px;
+				        border-radius: 2px;
+				-webkit-box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				        box-sizing: border-box;
+				left: 0;
+				background-color: #FFF;
+				@include transition(.4s);
+			}
+			&:before {
+				top: 0;
+			}
+			&:after {
+				bottom: 0;
+			}
+			&_active {
+				span {
+					display: none;
+					@include transition(.6s);					
+				}
+				&:before {
+					top: 50%;
+			        transform: rotate(225deg) translateY(-50%);
+				}
+				&:after {
+					bottom: 50%;
+			        transform: rotate(-225deg) translateY(50%);
+				}
 			}
 		}
 	}
@@ -35,6 +87,7 @@
 		}
 	}
 	&__lang {
+		display: none;
 		float:right;
 		width: 40px;
 		margin: 20px 0;

@@ -160,7 +160,7 @@
 			margin-top: 125px;
     	margin-bottom: 15px;
     	@include respondTo(largeScreen) {
-					margin-top: 150px;
+					margin-top: 200px;
     			margin-bottom: 50px;
 			}
 		}
@@ -209,7 +209,7 @@
 		&_mockup {
 			position: absolute;
 			left: 5%;
-			top: 0;
+			top: 120px;
 			z-index: 10;
 			width: 45%;
 		}
@@ -321,7 +321,6 @@
 			position: relative;
 			text-align: center;
 			margin-bottom: 15px;
-			pointer-events: initial;
 		}
 		&_title {
 			float: left;
@@ -362,16 +361,19 @@
 			strong {
 				font-family: $b;
 				text: $blue 28px;
+				@include transition(.3s);
 			}
 		}
 		&_list {
 			float: left;
 			width: 100%;
 			padding: 0;
-			li {				
-				text: #251c1d uppercase 16px;
+			li {					
 				margin-bottom: 15px;
 				pointer-events: initial;
+				a {
+					text: #251c1d uppercase 16px;
+				}
 			}
 		}
 	}

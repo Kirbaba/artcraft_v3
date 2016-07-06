@@ -128,12 +128,12 @@ canvas.particles-js-canvas-el {
     position: absolute;
     top: -50px;
     transform: rotate(35deg);
-    transition: all .8s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
     width: 50px;
-    z-index: -10;
+    z-index: 0;
   }
   &:hover {
-    font-family: $m;
+    /* font-family: $m; */
     letter-spacing: 1px;
     &:after {
       left: 120%;
@@ -141,3 +141,4 @@ canvas.particles-js-canvas-el {
     }
   }
 }
+

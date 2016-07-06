@@ -1,0 +1,97 @@
+.modal {
+	display: none;
+	position: fixed 0;
+	z-index: 9999;
+	background-color: rgba(0,0,0,0.3);
+	overflow: hidden;
+	&__box {
+		margin: 0 auto;
+		width: 80%;
+		max-width: 800px;		
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		background-color: #FFF;
+		padding: 150px 50px 100px 50px;
+		top: 10%;
+		left: 50%;
+		position: absolute;
+		z-index: 9999;
+		-webkit-transform: translate(-50%, 0%);
+		   -moz-transform: translate(-50%, 0%);
+		    -ms-transform: translate(-50%, 0%);
+		     -o-transform: translate(-50%, 0%);
+		        transform: translate(-50%, 0%);
+		@include border-radius(10px);
+		@include box-shadow(0 0 65px rgba(203,203,203,.5));
+		 transition: top ease-out .4s;
+		text-align: center;
+		&_visible {
+			z-index: 9999;
+			opacity: 1;
+			top: 50%;
+			 transition: top ease-out .4s;
+			-webkit-transform: translate(-50%, -50%);
+			   -moz-transform: translate(-50%, -50%);
+			    -ms-transform: translate(-50%, -50%);
+			     -o-transform: translate(-50%, -50%);
+			        transform: translate(-50%, -50%);		
+		}
+		&_decoration {
+			position: absolute;
+			left: 40%;
+			top: 90px;
+			z-index: 0;
+			size: 352px 236px;
+			background-image: url('../img/paper-airplane1.png');
+			background-repeat: no-repeat;
+			-webkit-background-size: contain;
+			     -o-background-size: contain;
+			        background-size: contain;
+		}
+	}
+	h3 {
+		font-family: $bl;
+		text-transform: uppercase;
+		color: $base;
+		font-size: 62px;
+	}
+	&__input {
+		width: 70%;		
+		margin: 25px auto;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 20px 15px;
+		outline: none;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		border-color: #CBCBCB;
+	}
+	&_active {	
+		position: absolute 0 0;	
+		display: block;
+		@include transition(.5s);
+		background-color: rgba(0,0,0,0.3);
+		z-index: 0;
+	}
+	&__btn {
+		@extend %blue_btn;
+		display: block;
+		width: 65%;
+		margin: 15px auto;
+		text-transform: none;
+		cursor: pointer;
+	}
+	&-overlay {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 900;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3) !important;
+	}
+}

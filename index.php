@@ -100,7 +100,7 @@ get_header(); // подключаем header.php ?>
 						Вот это, я понимаю, 
 						<strong>скидка!</strong>
 					</h3>	
-					<a href="#" class="home-partners__shares_desc_btn"><span>Хочу участвовать</span></a>
+					<a href="#" class="home-partners__shares_desc_btn js_get-modal" data-modal="modal__share"><span>Хочу участвовать</span></a>
 				</div>
 				<!-- close .home-partners__shares_desc -->
 				
@@ -135,15 +135,15 @@ get_header(); // подключаем header.php ?>
 					<!-- close .home-services_title -->
 					<!-- open .home-services_price -->
 					<h5 class="home-services_price">
-						от <strong>X XXX</strong> ₽
+						от <strong class="js_price">X XXX</strong> ₽
 					</h5>
 					<!-- close .home-services_price -->
 					<!-- open .home-services_list -->
 					<ul class="home-services_list">
-						<li>аудит сайта</li>
-						<li>Online-исследования</li>
-						<li>Коммуникационная стратегия</li>
-						<li>SMM-стратегия</li>
+						<li><a href="#" class="js_service__item" data-price="20 000">аудит сайта</a></li>
+						<li><a href="#" class="js_service__item" data-price="23 000">Online-исследования</a></li>
+						<li><a href="#" class="js_service__item" data-price="28 000">Коммуникационная стратегия</a></li>
+						<li><a href="#" class="js_service__item" data-price="2 000">SMM-стратегия</a></li>
 					</ul>
 					<!-- close .home-services_list -->
 				</div>
@@ -162,17 +162,17 @@ get_header(); // подключаем header.php ?>
 					<!-- close .home-services_title -->
 					<!-- open .home-services_price -->
 					<h5 class="home-services_price">
-						от <strong>X XXX</strong> ₽
+						от <strong class="js_price">X XXX</strong> ₽
 					</h5>
 					<!-- close .home-services_price -->
 					<!-- open .home-services_list -->
 					<ul class="home-services_list">
-						<li>Прототипы</li>
-						<li>Информационный дизайн</li>
-						<li>Полиграфия</li>
-						<li>Разработка платформы бренда</li>
-						<li>Нейминг, разработка слогана</li>
-						<li>Логотип, фирменный стиль</li>
+						<li><a href="#" class="js_service__item" data-price="20 000">Прототипы</a></li>
+						<li><a href="#" class="js_service__item" data-price="20 111">Информационный дизайн</a></li>
+						<li><a href="#" class="js_service__item" data-price="20 999">Полиграфия</a></li>
+						<li><a href="#" class="js_service__item" data-price="20 8888">Разработка платформы бренда</a></li>
+						<li><a href="#" class="js_service__item" data-price="20 222">Нейминг, разработка слогана</a></li>
+						<li><a href="#" class="js_service__item" data-price="20 855">Логотип, фирменный стиль</a></li>
 					</ul>
 					<!-- close .home-services_list -->
 				</div>
@@ -191,15 +191,15 @@ get_header(); // подключаем header.php ?>
 					<!-- close .home-services_title -->
 					<!-- open .home-services_price -->
 					<h5 class="home-services_price">
-						от <strong>X XXX</strong> ₽
+						от <strong class="js_price">X XXX</strong> ₽
 					</h5>
 					<!-- close .home-services_price -->
 					<!-- open .home-services_list -->
 					<ul class="home-services_list">
-						<li>Техническое задание</li>
-						<li>Веб-разработка</li>
-						<li>Адаптивный дизайн</li>
-						<li>Адаптивный дизайн</li>
+						<li><a href="#" class="js_service__item" data-price="2 000">Техническое задание</a></li>
+						<li><a href="#" class="js_service__item" data-price="5 000">Веб-разработка</a></li>
+						<li><a href="#" class="js_service__item" data-price="2 000">Адаптивный дизайн</a></li>
+						<li><a href="#" class="js_service__item" data-price="8 000">Адаптивный дизайн</a></li>
 					</ul>
 					<!-- close .home-services_list -->
 				</div>
@@ -327,7 +327,7 @@ get_header(); // подключаем header.php ?>
 										с клиентом. Все это совершенно БЕСПЛАТНО!
 										</p>
 									</div>
-									<a href="#" class="home-steps__item_description_btn"><span>Оформить заказ</span></a>
+									<a href="#" class="home-steps__item_description_btn js_get-modal" data-modal="modal__share"><span>Оформить заказ</span></a>
 								</div>
 								<!-- close .flexw -->
 
@@ -348,7 +348,7 @@ get_header(); // подключаем header.php ?>
 											тоторый обеспечивает наша стулия.
 										</p>
 									</div>
-									<a href="#" class="home-steps__item_description_btn"><span>Оформить заказ</span></a>
+									<a href="#" class="home-steps__item_description_btn js_get-modal" data-modal="modal__share"><span>Оформить заказ</span></a>
 								</div>
 								<!-- close .flexw -->
 
@@ -369,7 +369,7 @@ get_header(); // подключаем header.php ?>
 											предложению скептически
 										</p>
 									</div>
-									<a href="#" class="home-steps__item_description_btn"><span>Оформить заказ</span></a>
+									<a href="#" class="home-steps__item_description_btn js_get-modal" data-modal="modal__share"><span>Оформить заказ</span></a>
 								</div>
 								<!-- close .flexw -->
 
@@ -396,7 +396,7 @@ get_header(); // подключаем header.php ?>
 				<!-- open .home-order__box -->
 				<div class="home-order__box">
 					<h2>ЗАКАЖИТЕ <span>БЕСПЛАТНО</span> РАЗРАБОТКУ ПРОТОТИПА</h2>
-					<a href="#" class="home-order_btn"><span>Оформить заказ</span></a>
+					<a href="#" class="home-order_btn js_get-modal" data-modal="modal__share"><span>Оформить заказ</span></a>
 					<small>Далеко-далеко за словесными горами в стране.</small>
 				</div>
 				<!-- close .home-order__box -->

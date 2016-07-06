@@ -15,4 +15,26 @@ jQuery(document).ready(function($) {
     var this_price = $(this).data("price");
     $(this).parent().parent().prev().find(".js_price").html(this_price);
   });
+
+ 
+ 
 });
+
+function imageSize() {
+ 
+   jQuery(".img-wrap").each(function(i, el) {
+    var img = new Image();
+    var obj = jQuery(this);
+    var link = obj.attr("href");
+    img.onload = function() {
+        var size = (this.width + 'x' + this.height);
+        obj.parent().attr('data-size', size);
+    };   
+    img.src = link;
+    
+   });
+}
+
+
+
+

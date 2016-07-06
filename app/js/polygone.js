@@ -1,6 +1,6 @@
 
 jQuery(document).ready(function($) {
- 
+  if($('.particles-js').length != 0) {
     particlesJS("particles-js", {
       "particles": {
     "number": {
@@ -111,6 +111,8 @@ jQuery(document).ready(function($) {
   },
   "retina_detect": true
     }); 
+  }
+    
 });
 
 /* ---- particles.js config ---- */

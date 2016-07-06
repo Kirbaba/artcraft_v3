@@ -82,14 +82,22 @@ function add_scripts() { // добавление скриптов
     /*wp_enqueue_script('simmScroll', get_template_directory_uri().'/js/jquery.slimscroll.min.js','','',true);*/
     wp_enqueue_script('owl', get_template_directory_uri().'/js/owl.carousel.min.js','','',true);
     wp_enqueue_script('smoothscrall', get_template_directory_uri().'/js/smooth-scroll.min.js','','',true);
-   /* wp_enqueue_script('parallax', get_template_directory_uri().'/js/parallax.min.js','','',true);*/
+
+
+
     wp_enqueue_script('swiper', get_template_directory_uri().'/js/swiper.min.js','','',true);
     wp_enqueue_script('modernizr', get_template_directory_uri().'/js/modernizr.js','','');
     wp_enqueue_script('particles',  get_template_directory_uri().'/js/particles.min.js','','', true);
 
+    wp_enqueue_script('modernizr-custom', get_template_directory_uri().'/js/gallery/modernizr-custom.js','','');
+    wp_enqueue_script('imagesloaded', get_template_directory_uri().'/js/gallery/imagesloaded.pkgd.min.js','','',true);
+    wp_enqueue_script('masonry', get_template_directory_uri().'/js/gallery/masonry.pkgd.min.js','','',true);
+    wp_enqueue_script('classie', get_template_directory_uri().'/js/gallery/classie.js','','',true);
+    wp_enqueue_script('portfolio_main', get_template_directory_uri().'/js/gallery/main.js','','',true);
+
 
     wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.min.js','','',true); // бутстрап
-    wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
+    wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','',''); // portfolio size
 	wp_localize_script('main', 'myajax',
 		array(
 			'url' => admin_url('admin-ajax.php')

@@ -6,9 +6,15 @@
 	padding-top: 15px;
 	z-index: 9999;
 	color: #FFF;
+	&_pages {
+		z-index: 1;
+		position: relative;
+		margin-bottom: 15px;
+	}
 	&__menu {
 		float: right;
-		/* float: left; */
+		margin: 0;
+		position: relative;
 		li {
 			float: left;
 			margin: 0 25px;

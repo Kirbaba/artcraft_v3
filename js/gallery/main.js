@@ -92,8 +92,8 @@
 		// x and y can have values from 0 to 1 (percentage). If negative then it means the alignment is left and/or top rather than right and/or bottom
 		// so, as an example, if we want our large image to be positioned vertically on 25% of the screen and centered horizontally the values would be x:1,y:-0.25
 		imgPosition : { x : 1, y : 1 },
-		onInit : function(instance) { return false; },
-		onResize : function(instance) { return false; },
+		onInit : function(instance) { return true; },
+		onResize : function(instance) { return true; },
 		onOpenItem : function(instance, item) { return false; },
 		onCloseItem : function(instance, item) { return false; },
 		onExpand : function() { return false; }

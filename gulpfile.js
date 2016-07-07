@@ -9,6 +9,7 @@ var gulp = require('gulp'), // Подключаем Gulp
     pngquant = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     cache = require('gulp-cache'), // Подключаем библиотеку кеширования
     sourcemaps = require('gulp-sourcemaps'),
+    gulpUtil = require('gulp-util'),
     rimraf = require('rimraf');
 
     var postcss = require('gulp-postcss');
@@ -109,14 +110,12 @@ gulp.task('img', function() {
 
 gulp.task('compress', ['clean'], function() {
   return gulp.src('app/js/*.js')
-    .pipe(sourcemaps.init())
     .pipe(concat('script.js'))
     .pipe(rename({
         suffix: ".min",
         extname: ".js"
     }))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('', { sourceRoot: 'js-source' }))
+    .pipe(uglify().on('error', gulpUtil.log))
     .pipe(gulp.dest('js'));
 
 });

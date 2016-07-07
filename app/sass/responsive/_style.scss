@@ -92,6 +92,9 @@
 	.home-steps__item_description {
 		height: auto;
 	}
+	.grid__item {
+		width: 33%;
+	}
 }
 
 
@@ -138,6 +141,9 @@
 	}
 	.home-projects__more_btn {
 		width: 60%;
+	}
+	.grid__item {
+		width: 33%;
 	}
 }
 
@@ -295,6 +301,13 @@
 		    -ms-transform: translateX(-10%);
 		     -o-transform: translateX(-10%);
 		        transform: translateX(-10%);
+	}
+	.grid__item {
+		width: 50%;
+	}
+
+	.portfolio h2 {
+		display: none;
 	}
 }
 

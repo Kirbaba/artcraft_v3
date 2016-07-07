@@ -145,6 +145,9 @@
 	.grid__item {
 		width: 33%;
 	}
+	.portfolio h2 {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 736px) {
@@ -304,10 +307,13 @@
 	}
 	.grid__item {
 		width: 50%;
-	}
+	}	
 
-	.portfolio h2 {
-		display: none;
+	.portfolio {
+		padding-top: 175px;
+	}
+	.navigation__menu {
+		margin: 0;
 	}
 }
 

@@ -94,4 +94,19 @@
 		height: 100%;
 		background: rgba(0, 0, 0, 0.3) !important;
 	}
+	&_close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		size: 35px;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background: none;
+		padding: 0;
+		svg {
+			display: block;
+			size: 35px;
+		}
+	}
 }

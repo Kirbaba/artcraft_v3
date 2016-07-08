@@ -11,11 +11,15 @@ jQuery(document).ready(function($) {
 		$(".modal__box").slideUp().removeClass('modal__box_visible');
 		$(".modal").hide();
 		$(this).remove();
-		 if( event.keyCode === 27 ) {
-            alert('Pressed escape');
+		 if( event.keyCode === 27 ) {            
             return false;
         }
 
+	});
+	$(document).on("click", ".modal_close", function(event) {
+		event.preventDefault();
+		$(".modal__box").slideUp().removeClass('modal__box_visible');
+		$(".modal").hide();
 	});
 
 

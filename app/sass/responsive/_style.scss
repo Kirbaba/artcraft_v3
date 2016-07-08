@@ -319,6 +319,43 @@
 	.navigation__menu {
 		margin: 0;
 	}
+	.portfolio:before {
+		height: 290px;
+	}
+	.description--preview {
+		padding: 0 15px;
+	}
+	.portfolio_btn {
+		width: 100%;
+		padding: 0 10px;
+		text-align: center;
+		margin-top: 15px;
+	}
+	.modal {
+		h3 {
+			font-size: 32px;
+			z-index: 9;
+			margin-bottom: 0;
+		}
+		&__input {
+			width: 100%;
+			margin: 10px 0;
+		}
+		&__btn {
+			width: 100%;
+			margin: 10px 0;
+			font-size: 18px;
+		}
+		&__box {
+		padding: 20px;
+			&_decoration {
+				display: none;
+				left: 15px;
+				top: 15px;
+				width: 90%;
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 500px) {

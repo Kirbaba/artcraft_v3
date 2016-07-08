@@ -79,6 +79,12 @@ get_header(); // подключаем header.php ?>
 									<h3>BMW X6 Scolcino</h3>
 									<p>Русаков наделал <em>&mdash; Gary L. Francione</em></p>
 									<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Журчит вершину о меня ее, продолжил все снова предложения безорфографичный?</p>
+									<button class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
+										<svg>
+											<rect x="0" y="0" fill="none" width="100%" height="100%"/>
+										</svg>
+										заказать
+									</button>
 								</div>
 							</a>
 						</div>
@@ -205,7 +211,9 @@ get_header(); // подключаем header.php ?>
 							
 							<span class="text-hidden">Close</span>
 						</button>
-						<div class="description description--preview"></div>
+						<div class="description description--preview">
+							
+						</div>
 					</div>
 					<!-- /preview -->	
 				</div>	

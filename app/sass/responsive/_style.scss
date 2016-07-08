@@ -95,6 +95,10 @@
 	.grid__item {
 		width: 33%;
 	}
+	.portfolio .home-projects__nav {
+		-webkit-flex-basis: 100%;
+		        flex-basis: 100%;
+	}
 }
 
 

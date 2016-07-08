@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-	$(".js_get-modal").click(function(event) {
+	$(document).on("click", ".js_get-modal", function(event) {
 		event.preventDefault();
 		var modal = ($(this).data('modal'));
 		$("." + modal).show();
@@ -17,6 +17,7 @@ jQuery(document).ready(function($) {
         }
 
 	});
+
 
 	 $(document).keydown(function(e) {
 	 	if(".modal".length != 0) {

@@ -331,6 +331,9 @@
 		text-align: center;
 		margin-top: 15px;
 	}
+	.home-projects h4 {
+		line-height: 1.2;
+	}
 	.modal {
 		h3 {
 			font-size: 32px;
@@ -355,6 +358,12 @@
 				width: 90%;
 			}
 		}
+	}
+	.modal__project_content p {
+		display: none;
+	}
+	.modal__project_content h3 {
+	    font-size: 18px;
 	}
 }
 

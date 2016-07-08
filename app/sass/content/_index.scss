@@ -713,11 +713,14 @@
 		    width: 100%;
 
 		    margin: 5px 0;
+		    &_content {
+	         	display: none;	         	
+	         }
 		    &_item {
 		    	-webkit-flex-basis: 32.8%;
 		    	        flex-basis: 32.8%;
 		         @include overflow-img;
-		         height: 180px;
+		         height: 180px;		         
 		         background-color: $base;
 		         img {
 		         	@include transition(.3s);

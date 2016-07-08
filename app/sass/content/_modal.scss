@@ -4,6 +4,9 @@
 	z-index: 9999;
 	background-color: rgba(0,0,0,0.3);
 	overflow: hidden;
+	&__share {
+		z-index: 99999;
+	}
 	&__box {
 		margin: 0 auto;
 		width: 80%;
@@ -104,9 +107,66 @@
 		cursor: pointer;
 		background: none;
 		padding: 0;
+		z-index: 99;
 		svg {
 			display: block;
 			size: 35px;
+		}
+	}
+	&__project {
+		background-color: #251c1d;
+		@include transition(.3s);
+		&_close {
+			@extend .modal_close;
+		}
+		&_image-box {
+			float: left;
+			width: 50%;
+			height: 100%;
+			display: flex;
+			-webkit-justify-content: center;
+			        justify-content: center;
+			-webkit-align-items: center;
+			        align-items: center;
+			-webkit-flex-flow: row wrap;
+			    -ms-flex-flow: row wrap;
+			        flex-flow: row wrap;
+			img {
+				height: auto;
+				max-height: 100%;
+			}
+		}
+		&_content {
+			@extend .modal__project_image-box;
+			-webkit-justify-content: flex-start;
+			        justify-content: flex-start;
+			color: #FFF;
+			padding: 0 1em;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			h3 {
+				font-weight: 400;
+				margin: 0;
+				display: block;
+				color: #FFF;
+				font-family: $r;
+				text-transform: none;
+         	}
+         	p {
+				font-size: 18px;
+				max-width: 100%;
+				font-family: $r;
+				em {
+					color: #5d5d5d;
+					display: block;
+					padding: .4em 0 0;
+				}
+         	}
+         	.portfolio_btn {
+         		float: left;
+         		margin-right: 0;
+         	}
 		}
 	}
 }

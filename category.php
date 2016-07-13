@@ -7,7 +7,6 @@
 get_header(); // подключаем header.php ?> 
 	<!-- open .portfolio container -->
 	<section class="portfolio">
-		
 		<!-- open .container -->
 		<div class="container">
 			<h2>Наши работы</h2>
@@ -16,17 +15,17 @@ get_header(); // подключаем header.php ?>
 				<nav class="portfolio-projects__nav">
 					<ul>
 						<li>
-							<a href="#" class="portfolio-projects__nav_btn portfolio-projects__nav_btn_active" data-activity="show_site"><span>РАЗРАБОТКА САЙТА</span></a>
+							<a href="#" class="portfolio-projects__nav_btn " data-activity="show_site"><span>РАЗРАБОТКА САЙТА</span></a>
 						</li>
 						<li>
-							<a href="#" class="portfolio-projects__nav_btn" data-activity="show_design"><span>ДИЗАЙН</span></a>
+							<a href="#" class="portfolio-projects__nav_btn portfolio-projects__nav_btn_active"
+							   data-activity="show_design"><span>ДИЗАЙН</span></a>
 						</li>
 						<li>
 							<a href="#" class="portfolio-projects__nav_btn" data-activity="show_smm"><span>SMM</span></a>
 						</li>
 					</ul>
 				</nav>
-				
 				<!-- open .home-projects__tabs show_site -->		
 				<div class="home-projects__tabs show_site">
 					<!-- close .home-projects__tabs show_site -->
@@ -174,10 +173,9 @@ get_header(); // подключаем header.php ?>
 							
 						</div>
 					</div>
-					<!-- /preview -->	
-				</div>	
-				
-				<!-- open .home-projects__tabs show_site -->		
+					<!-- /preview -->
+				</div>
+				<!-- open .home-projects__tabs show_site -->
 				<div class="home-projects__tabs show_design">
 					<!-- close .home-projects__tabs show_site -->
 					<div class="grid_box">
@@ -315,17 +313,11 @@ get_header(); // подключаем header.php ?>
 						</button>
 						<div class="description description--preview"></div>
 					</div>
-					<!-- /preview -->	
-				</div>	
-
-				
+					<!-- /preview -->
+				</div>
 			</div>
-			
-			
 		</div>
 		<!-- close .container -->
-		
-			
 	</section>
 	<!-- close .portfolio container -->
 <?php get_footer(); // подключаем footer.php ?>

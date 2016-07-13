@@ -13,6 +13,11 @@ $options = array(
         'type'  => 'textarea',
         'value' => 'Далеко-далеко за словесными горами в стране.',
     ),
+    'bg_image'    => array(
+        'label'       => __( 'Фоновая картинка', 'unyson' ),
+        'type'        => 'upload',
+        'images_only' => true,
+    ),
     'link_title'  => array(
         'label' => __( 'Текст ссылки', 'unyson' ),
         'type'  => 'text',

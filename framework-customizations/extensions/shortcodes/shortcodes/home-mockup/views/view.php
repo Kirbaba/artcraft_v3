@@ -1,8 +1,13 @@
 <?php if ( ! defined( 'FW' ) ) {
     die( 'Forbidden' );
-} ?>
+}
+$bg_image = $atts['bg_image']['url'];
+
+?>
 <!-- open .section home-order -->
-<div class="section home-order">
+
+<div
+    class="section home-order" <?php echo ( ! empty( $bg_image ) ) ? "style='background-image: url(" . $bg_image . ");'" : ''; ?>>
     <!-- open .intro -->
     <div class="intro">
         <!-- open .container -->

@@ -97,6 +97,7 @@ function add_scripts() { // добавление скриптов
 
 
     wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.min.js','','',true); // бутстрап
+    //wp_enqueue_script('custom-scripts2', get_template_directory_uri().'/js/script.js','','',true); // бутстрап
     wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','',''); // portfolio size
 	wp_localize_script('main', 'myajax',
 		array(
@@ -127,3 +128,21 @@ function content_class_by_sidebar() { // функция для вывода кл
 		echo 'col-sm-12'; // контент на всю ширину
 	}
 }
+
+// AJAX ACTION
+add_action( 'wp_ajax_mailform', 'sendMailForm' );
+add_action( 'wp_ajax_nopriv_mailform', 'sendMailForm' );
+
+function sendMailForm() {
+    if ( $_POST ) {
+
+        $adminMail = get_option( 'admin_email' );
+
+        $str = "С вашего сайта оставили заявку:<br>";
+        $str .= 'Почта: ' . $_POST["email"] . ' <br>';
+
+        wp_mail( $adminMail, "SURPRIZE MOTHERF*CKER", $str, "Content-type: text/html; charset=UTF-8\r\n" );
+    }
+    wp_die();
+}
+

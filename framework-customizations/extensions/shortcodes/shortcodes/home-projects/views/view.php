@@ -74,10 +74,10 @@
                     // Цикл
                     if ( $sites->have_posts() ) :
                         while ( $sites->have_posts() ) : $sites->the_post(); ?>
-                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>"
+                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>"
                                class="home-projects__tabs_item"
                                data-modal="modal__project">
-                                <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
+                                <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
                                 <span class="home-projects__tabs_content">
                                     <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
                                     <p><?php echo fw_get_db_post_option( get_the_ID(), 'description' ); ?>

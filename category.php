@@ -41,7 +41,7 @@ get_header(); // подключаем header.php ?>
 									<?php the_post_thumbnail( 'medium' ); ?>
 									<div class="description description--grid">
 										<h3><?php the_title(); ?></h3>
-										<p><?php echo fw_get_db_post_option( get_the_ID(), 'description' ); ?>
+										<p><?php echo get_the_content( get_the_ID() ); ?>
 											<em>&mdash;<?php echo fw_get_db_post_option( get_the_ID(), 'author' ); ?></em>
 										</p>
 										<button class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">

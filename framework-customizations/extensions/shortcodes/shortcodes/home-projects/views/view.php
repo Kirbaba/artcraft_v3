@@ -80,7 +80,7 @@
                                 <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
                                 <span class="home-projects__tabs_content">
                                     <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
-                                    <p><?php echo fw_get_db_post_option( get_the_ID(), 'description' ); ?>
+                                    <p><?php echo get_the_content( get_the_ID() ); ?>
                                         <em>&mdash;<?php echo fw_get_db_post_option( get_the_ID(), 'author' ); ?></em>
                                     </p>
                                     <button class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">

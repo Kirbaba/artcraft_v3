@@ -3,8 +3,7 @@
 } ?>
 
 <!-- open .particles -->
-<div class="box-part" id="particles-js">
-    <div class="home-partners" id="moveto_about">
+<section class="home-partners" id="moveto_about">
         <!-- open .container -->
         <div class="container">
             <h2><?php echo $atts['title']; ?></h2>
@@ -28,5 +27,4 @@
             <!-- close .home-partners__shares -->
         </div>
         <img class="home-partners_mockup" src="<?php echo $atts['image']['url']; ?>" alt=""/>
-    </div>
-</div>
+</section>

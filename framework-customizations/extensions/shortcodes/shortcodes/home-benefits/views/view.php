@@ -1,8 +1,7 @@
 <?php if ( ! defined( 'FW' ) ) {
     die( 'Forbidden' );
 } ?>
-<div class="box-part">
-    <div class="home-services" id="home-services">
+<section class="home-services" id="home-services">
         <div class="intro">
             <!-- open .container -->
             <div class="container">
@@ -43,5 +42,4 @@
             </div>
             <!-- close .container -->
         </div>
-    </div>
-</div>
+</section>

@@ -30,7 +30,7 @@ $options = array(
                 'type'  => 'text',
                 'label' => __( 'Ссылка', 'unyson' ),
             ),
-            'limk_title' => array(
+            'link_title' => array(
                 'type'  => 'text',
                 'label' => __( 'Заголовок ссылки', 'unyson' ),
             ),

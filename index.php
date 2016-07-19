@@ -35,132 +35,131 @@ get_header(); // подключаем header.php ?>
 
 	</div>
 <!-- open .particles -->
-<div class="box-part" id="particles-js">
-	<div class="home-partners" id="moveto_about">
-		<!-- open .container -->
-		<div class="container">
-			<h2>Акции и скидки</h2>
-			<!-- open .home-partners__shares -->
-			<div class="home-partners__shares">
-				<!-- open .home-partners__shares_icon -->
-				<div class="home-partners__shares_icon">
-					<img src="<?php bloginfo('template_directory'); ?>/img/tree.png" alt="" />
-				</div>
-				<!-- close .home-partners__shares_icon -->
-				<!-- open .home-partners__shares_desc -->
-				<div class="home-partners__shares_desc">
-					<h3>
-                        ЗАКАЖИ БЫСТРЕЕ
-                        <strong>ПО ЦЕНЕ 2Х!</strong>
-                        Вот это, я понимаю,
-						<strong>скидка!</strong>
-                    </h3>
-					<a href="#" class="home-partners__shares_desc_btn js_get-modal" data-modal="modal__share"><span>Хочу участвовать</span></a>
-				</div>
-				<!-- close .home-partners__shares_desc -->
+<section class="home-partners" id="moveto_about">
+	<!-- open .container -->
+	<div class="container">
+		<h2>Акции и скидки</h2>
+		<!-- open .home-partners__shares -->
+		<div class="home-partners__shares">
+			<!-- open .home-partners__shares_icon -->
+			<div class="home-partners__shares_icon">
+				<img src="<?php bloginfo('template_directory'); ?>/img/tree.png" alt="" />
 			</div>
-			<!-- close .home-partners__shares -->
+			<!-- close .home-partners__shares_icon -->
+			<!-- open .home-partners__shares_desc -->
+			<div class="home-partners__shares_desc">
+				<h3>
+                    ЗАКАЖИ БЫСТРЕЕ
+                    <strong>ПО ЦЕНЕ 2Х!</strong>
+                    Вот это, я понимаю,
+					<strong>скидка!</strong>
+                </h3>
+				<a href="#" class="home-partners__shares_desc_btn js_get-modal" data-modal="modal__share"><span>Хочу участвовать</span></a>
+			</div>
+			<!-- close .home-partners__shares_desc -->
 		</div>
-	 	<img class="home-partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mockups_works-1.png
-	 	" alt="" />
+		<!-- close .home-partners__shares -->
 	</div>
-	<div class="home-services" id="home-services">
-		<div class="intro">
-		<!-- open .container -->
-		<div class="container">
-			<h3>#Я<strong>ARTCRAFT</strong></h3>
+ 	<img class="home-partners_mockup" src="<?php bloginfo('template_directory'); ?>/img/mockups_works-1.png
+ 	" alt="" />
+</section>
+
+<section class="home-services" id="home-services">
+	<div class="intro">
+	<!-- open .container -->
+	<div class="container">
+		<h3>#Я<strong>ARTCRAFT</strong></h3>
+		<!-- open .home-services_item -->
+		<!-- open .home-services__flex -->
+		<div class="home-services__flex">
+			<div class="home-services_item">
+				<!-- open .home-services_icon -->
+				<div class="home-services_icon">
+					<img src="<?php bloginfo('template_directory'); ?>/img/04298abddeeee76679ef90e2dcb1f72b.png" alt="" />
+				</div>
+				<!-- close .home-services_icon -->
+				<!-- open .home-services_title -->
+				<div class="home-services_title">
+					<h4>СТРАТЕГИЯ</h4>
+				</div>
+				<!-- close .home-services_title -->
+				<!-- open .home-services_price -->
+				<h5 class="home-services_price">
+					от <strong class="js_price">X XXX</strong> ₽
+				</h5>
+				<!-- close .home-services_price -->
+				<!-- open .home-services_list -->
+				<ul class="home-services_list">
+					<li><a href="#" class="js_service__item" data-price="20 000">аудит сайта</a></li>
+					<li><a href="#" class="js_service__item" data-price="23 000">Online-исследования</a></li>
+					<li><a href="#" class="js_service__item" data-price="28 000">Коммуникационная стратегия</a></li>
+					<li><a href="#" class="js_service__item" data-price="2 000">SMM-стратегия</a></li>
+				</ul>
+				<!-- close .home-services_list -->
+			</div>
+			<!-- close .home-services_item -->
 			<!-- open .home-services_item -->
-			<!-- open .home-services__flex -->
-			<div class="home-services__flex">
-				<div class="home-services_item">
-					<!-- open .home-services_icon -->
-					<div class="home-services_icon">
-						<img src="<?php bloginfo('template_directory'); ?>/img/04298abddeeee76679ef90e2dcb1f72b.png" alt="" />
-					</div>
-					<!-- close .home-services_icon -->
-					<!-- open .home-services_title -->
-					<div class="home-services_title">
-						<h4>СТРАТЕГИЯ</h4>
-					</div>
-					<!-- close .home-services_title -->
-					<!-- open .home-services_price -->
-					<h5 class="home-services_price">
-						от <strong class="js_price">X XXX</strong> ₽
-					</h5>
-					<!-- close .home-services_price -->
-					<!-- open .home-services_list -->
-					<ul class="home-services_list">
-						<li><a href="#" class="js_service__item" data-price="20 000">аудит сайта</a></li>
-						<li><a href="#" class="js_service__item" data-price="23 000">Online-исследования</a></li>
-						<li><a href="#" class="js_service__item" data-price="28 000">Коммуникационная стратегия</a></li>
-						<li><a href="#" class="js_service__item" data-price="2 000">SMM-стратегия</a></li>
-					</ul>
-					<!-- close .home-services_list -->
+			<div class="home-services_item">
+				<!-- open .home-services_icon -->
+				<div class="home-services_icon">
+					<img src="<?php bloginfo('template_directory'); ?>/img/00179f806d7cfba4274a5d1705fa1ece.png" alt="" />
 				</div>
-				<!-- close .home-services_item -->
-				<!-- open .home-services_item -->
-				<div class="home-services_item">
-					<!-- open .home-services_icon -->
-					<div class="home-services_icon">
-						<img src="<?php bloginfo('template_directory'); ?>/img/00179f806d7cfba4274a5d1705fa1ece.png" alt="" />
-					</div>
-					<!-- close .home-services_icon -->
-					<!-- open .home-services_title -->
-					<div class="home-services_title">
-						<h4>ДИЗАЙН</h4>
-					</div>
-					<!-- close .home-services_title -->
-					<!-- open .home-services_price -->
-					<h5 class="home-services_price">
-						от <strong class="js_price">X XXX</strong> ₽
-					</h5>
-					<!-- close .home-services_price -->
-					<!-- open .home-services_list -->
-					<ul class="home-services_list">
-						<li><a href="#" class="js_service__item" data-price="20 000">Прототипы</a></li>
-						<li><a href="#" class="js_service__item" data-price="20 111">Информационный дизайн</a></li>
-						<li><a href="#" class="js_service__item" data-price="20 999">Полиграфия</a></li>
-						<li><a href="#" class="js_service__item" data-price="20 8888">Разработка платформы бренда</a></li>
-						<li><a href="#" class="js_service__item" data-price="20 222">Нейминг, разработка слогана</a></li>
-						<li><a href="#" class="js_service__item" data-price="20 855">Логотип, фирменный стиль</a></li>
-					</ul>
-					<!-- close .home-services_list -->
+				<!-- close .home-services_icon -->
+				<!-- open .home-services_title -->
+				<div class="home-services_title">
+					<h4>ДИЗАЙН</h4>
 				</div>
-				<!-- close .home-services_item -->
-				<!-- open .home-services_item -->
-				<div class="home-services_item">
-					<!-- open .home-services_icon -->
-					<div class="home-services_icon">
-						<img src="<?php bloginfo('template_directory'); ?>/img/c64d6ce166af46960db44ea1213cbfb3.png" alt="" />
-					</div>
-					<!-- close .home-services_icon -->
-					<!-- open .home-services_title -->
-					<div class="home-services_title">
-						<h4>разработка</h4>
-					</div>
-					<!-- close .home-services_title -->
-					<!-- open .home-services_price -->
-					<h5 class="home-services_price">
-						от <strong class="js_price">X XXX</strong> ₽
-					</h5>
-					<!-- close .home-services_price -->
-					<!-- open .home-services_list -->
-					<ul class="home-services_list">
-						<li><a href="#" class="js_service__item" data-price="2 000">Техническое задание</a></li>
-						<li><a href="#" class="js_service__item" data-price="5 000">Веб-разработка</a></li>
-						<li><a href="#" class="js_service__item" data-price="2 000">Адаптивный дизайн</a></li>
-						<li><a href="#" class="js_service__item" data-price="8 000">Адаптивный дизайн</a></li>
-					</ul>
-					<!-- close .home-services_list -->
-				</div>
-				<!-- close .home-services_item -->
+				<!-- close .home-services_title -->
+				<!-- open .home-services_price -->
+				<h5 class="home-services_price">
+					от <strong class="js_price">X XXX</strong> ₽
+				</h5>
+				<!-- close .home-services_price -->
+				<!-- open .home-services_list -->
+				<ul class="home-services_list">
+					<li><a href="#" class="js_service__item" data-price="20 000">Прототипы</a></li>
+					<li><a href="#" class="js_service__item" data-price="20 111">Информационный дизайн</a></li>
+					<li><a href="#" class="js_service__item" data-price="20 999">Полиграфия</a></li>
+					<li><a href="#" class="js_service__item" data-price="20 8888">Разработка платформы бренда</a></li>
+					<li><a href="#" class="js_service__item" data-price="20 222">Нейминг, разработка слогана</a></li>
+					<li><a href="#" class="js_service__item" data-price="20 855">Логотип, фирменный стиль</a></li>
+				</ul>
+				<!-- close .home-services_list -->
 			</div>
-			<!-- close .home-services__flex -->
+			<!-- close .home-services_item -->
+			<!-- open .home-services_item -->
+			<div class="home-services_item">
+				<!-- open .home-services_icon -->
+				<div class="home-services_icon">
+					<img src="<?php bloginfo('template_directory'); ?>/img/c64d6ce166af46960db44ea1213cbfb3.png" alt="" />
+				</div>
+				<!-- close .home-services_icon -->
+				<!-- open .home-services_title -->
+				<div class="home-services_title">
+					<h4>разработка</h4>
+				</div>
+				<!-- close .home-services_title -->
+				<!-- open .home-services_price -->
+				<h5 class="home-services_price">
+					от <strong class="js_price">X XXX</strong> ₽
+				</h5>
+				<!-- close .home-services_price -->
+				<!-- open .home-services_list -->
+				<ul class="home-services_list">
+					<li><a href="#" class="js_service__item" data-price="2 000">Техническое задание</a></li>
+					<li><a href="#" class="js_service__item" data-price="5 000">Веб-разработка</a></li>
+					<li><a href="#" class="js_service__item" data-price="2 000">Адаптивный дизайн</a></li>
+					<li><a href="#" class="js_service__item" data-price="8 000">Адаптивный дизайн</a></li>
+				</ul>
+				<!-- close .home-services_list -->
+			</div>
+			<!-- close .home-services_item -->
 		</div>
-		<!-- close .container -->
-		</div>
+		<!-- close .home-services__flex -->
 	</div>
-</div>
+	<!-- close .container -->
+	</div>
+</section>
 <div class="section home-projects" id="moveto_projects">
     <div class="intro">
         <div class="container">

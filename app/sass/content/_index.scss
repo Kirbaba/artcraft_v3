@@ -140,6 +140,7 @@
 		position: relative;
 		float: left;
 		width: 100%;
+		margin-top: -60vh;
 		/* background-image: url('../img/secondt-bg.png'); */
 		background-repeat: no-repeat;
 		background-size: 100%;
@@ -212,68 +213,6 @@
 			top: 120px;
 			z-index: 10;
 			width: 45%;
-		}
-		&_carousel {
-			width: 65%;
-			float: right;
-			box-sizing: border-box;
-			padding: 0 50px;
-			&_item {
-				height: 200px;
-				position: relative;
-				img {
-					object-fit: contain;
-					object-position: 50% 50%;
-					position: relative;
-					top: 50%;
-					left: 50%;
-					-webkit-transform: translate(-50%, -50%);
-					   -moz-transform: translate(-50%, -50%);
-					    -ms-transform: translate(-50%, -50%);
-					     -o-transform: translate(-50%, -50%);
-					        transform: translate(-50%, -50%);
-					max-width: 100%;
-				}
-			}
-			@include respondTo(largeScreen) {
-				width: 70%;
-			}
-		}
-		.owl-theme .owl-controls .owl-buttons div {
-			background-color: rgba(0,0,0,0);
-			background: url('../img/down-arrow.png');
-			-webkit-transform: translateY(-50%);
-			   -moz-transform: translateY(-50%);
-			    -ms-transform: translateY(-50%);
-			     -o-transform: translateY(-50%);
-			        transform: translateY(-50%);
-		}
-		.owl-buttons {
-			position: absolute;
-			top: 50%;
-			right: 0;
-			left: 0;
-		}
-		.owl-theme .owl-controls .owl-buttons div.owl-prev {
-			background: url('../img/up-arrow.png');
-			size: 28px 50px;
-			-webkit-background-size: contain;
-			     -o-background-size: contain;
-			        background-size: contain;
-			position: absolute;
-			right: 0;
-			display: none;
-		}
-		.owl-next {
-			position: absolute;
-			right: 0;
-			background-color: transparent;
-			background-image: url('../img/down-arrow.png');
-			background-repeat: no-repeat;
-			-webkit-background-size: contain;
-			     -o-background-size: contain;
-			        background-size: contain;
-			size: 28px 50px;
 		}
 	}
 	&-services {

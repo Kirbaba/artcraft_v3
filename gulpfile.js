@@ -5,8 +5,8 @@ var gulp = require('gulp'), // Подключаем Gulp
     uglify = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
     rename = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
     del = require('del'), // Подключаем библиотеку для удаления файлов и папок
-    imagemin = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
-    pngquant = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
+    //imagemin = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
+    //pngquant = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     cache = require('gulp-cache'), // Подключаем библиотеку кеширования
     sourcemaps = require('gulp-sourcemaps'),
     gulpUtil = require('gulp-util'),
@@ -56,10 +56,10 @@ gulp.task('sass', function() { // Создаем таск Sass
         autoprefixer(['last 5 versions', '> 5%', 'ie 8', 'ie 7'], {
             cascade: true
         }),
-        pxtorem({
+        /*pxtorem({
             rootValue: 14,
             replace: false
-        }),
+         }),*/
         stylefmt,
         cssnano
     ];
@@ -78,22 +78,22 @@ gulp.task('sass', function() { // Создаем таск Sass
         }));
 });
 
-gulp.task('browser-sync', function() { 
+gulp.task('browser-sync', function () {
     browserSync({ 
         proxy: {
-            target: 'artcraft.loc'
+            target: 'wp.dev'
         },
         ghostMode: {
-            clicks: true,
-            forms: true,
-            scroll: true
+            clicks: false,
+            forms: false,
+            scroll: false
         },
         notify: false 
     });
 });
 
-gulp.task('img', function() {
-    return gulp.src('app/img/**/*')
+/*gulp.task('img', function() {
+ return gulp.src('app/img/!**!/!*')
         .pipe(cache(imagemin({
             interlaced: true,
             progressive: true,
@@ -106,7 +106,7 @@ gulp.task('img', function() {
         .pipe(browserSync.reload({
             stream: true
         }));
-});
+ });*/
 
 gulp.task('compress', ['clean'], function() {
   return gulp.src('app/js/*.js')
@@ -125,7 +125,7 @@ gulp.task("clean", function (cb) {
 });
 
 gulp.task('watch', ['browser-sync'],  function() {
-    gulp.watch('app/img/**/*', ['img']);
+    //  gulp.watch('app/img/**/*', ['img']);
     gulp.watch('app/sass/**/*.scss', ['sass']);
     // gulp.watch('./**/*.php', browserSync.reload);
     gulp.watch('app/js/*', function() {
@@ -133,7 +133,7 @@ gulp.task('watch', ['browser-sync'],  function() {
   }, browserSync.reload); // Наблюдение за JS файлами в папке js
 });
 
-gulp.task('build', ['img', 'sass', 'scripts'], function() {
+gulp.task('build', ['sass', 'scripts'], function () {
 
     var buildCss = gulp.src([ // Переносим библиотеки в продакшен
             'app/css/main.css',

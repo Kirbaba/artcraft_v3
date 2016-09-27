@@ -13,7 +13,7 @@
                         <div class="home-services_item">
                             <!-- open .home-services_icon -->
                             <div class="home-services_icon">
-                                <img src="<?php echo $benefit['image']['url']; ?>" alt=""/>
+                                <img src="<?php echo $benefit['image']['url']; ?>" alt="<?php echo get_post_meta( $benefit['image']['attachment_id'], '_wp_attachment_image_alt', true); ?>"/>
                             </div>
                             <!-- close .home-services_icon -->
                             <!-- open .home-services_title -->

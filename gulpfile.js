@@ -1,6 +1,6 @@
 var gulp = require('gulp'), // Подключаем Gulp
     sass = require('gulp-sass'), //Подключаем Sass пакет,
-    browserSync = require('browser-sync'), // Подключаем Browser Sync
+    //browserSync = require('browser-sync'), // Подключаем Browser Sync
     concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
     uglify = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
     rename = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
@@ -34,10 +34,7 @@ gulp.task('css-libs', function() {
         ]) // Берем источник
         .pipe(postcss(processors))
         .pipe(concat('libs.min.css'))
-        .pipe(gulp.dest('css')) 
-        .pipe(browserSync.reload({
-            stream: true
-        })) 
+        .pipe(gulp.dest('css'))
 });
 
 gulp.task('js-libs', function() {
@@ -72,25 +69,9 @@ gulp.task('sass', function() { // Создаем таск Sass
             extname: ".css"
         }))
         .pipe(sourcemaps.write('.', { sourceRoot: 'css-source' }))
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
+        .pipe(gulp.dest('css'));
 });
 
-gulp.task('browser-sync', function () {
-    browserSync({ 
-        proxy: {
-            target: 'wp.dev'
-        },
-        ghostMode: {
-            clicks: false,
-            forms: false,
-            scroll: false
-        },
-        notify: false 
-    });
-});
 
 /*gulp.task('img', function() {
  return gulp.src('app/img/!**!/!*')
@@ -124,13 +105,13 @@ gulp.task("clean", function (cb) {
     rimraf('./js/script.min.js', cb);
 });
 
-gulp.task('watch', ['browser-sync'],  function() {
+gulp.task('watch',  function() {
     //  gulp.watch('app/img/**/*', ['img']);
     gulp.watch('app/sass/**/*.scss', ['sass']);
     // gulp.watch('./**/*.php', browserSync.reload);
     gulp.watch('app/js/*', function() {
        gulp.run('compress');
-  }, browserSync.reload); // Наблюдение за JS файлами в папке js
+  }); // Наблюдение за JS файлами в папке js
 });
 
 gulp.task('build', ['sass', 'scripts'], function () {

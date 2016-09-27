@@ -13,7 +13,7 @@
                     <?php foreach ( $atts['steps'] as $step ): ?>
                         <div class="swiper-slide home-steps__item">
                             <div class="home-steps__item_thumb" data-swiper-parallax="-400">
-                                <img src="<?php echo $step['image']['url']; ?>" alt=""/>
+                                <img src="<?php echo $step['image']['url']; ?>" alt="<?php echo get_post_meta( $step['image']['attachment_id'], '_wp_attachment_image_alt', true); ?>"/>
                             </div>
                             <div class="home-steps__item_description">
                                 <!-- open .flexw -->

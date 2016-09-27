@@ -11,7 +11,7 @@
             <div class="home-partners__shares">
                 <!-- open .home-partners__shares_icon -->
                 <div class="home-partners__shares_icon">
-                    <img src="<?php echo $atts['icon']['url']; ?>" alt=""/>
+                    <img src="<?php echo $atts['icon']['url']; ?>" alt="<?php echo get_post_meta( $atts['icon']['attachment_id'], '_wp_attachment_image_alt', true); ?>"/>
                 </div>
                 <!-- close .home-partners__shares_icon -->
                 <!-- open .home-partners__shares_desc -->
@@ -26,5 +26,5 @@
             </div>
             <!-- close .home-partners__shares -->
         </div>
-        <img class="home-partners_mockup" src="<?php echo $atts['image']['url']; ?>" alt=""/>
+        <img class="home-partners_mockup" src="<?php echo $atts['image']['url']; ?>" alt="<?php echo get_post_meta( $atts['image']['attachment_id'], '_wp_attachment_image_alt', true); ?>"/>
 </section>

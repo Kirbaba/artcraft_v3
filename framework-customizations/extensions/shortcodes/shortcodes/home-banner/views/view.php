@@ -9,10 +9,10 @@
         <!-- open .home-banner_title -->
         <div class="home-banner_title">
             <!-- open .home-banner_rectangle -->
-            <h2 class="home-banner_text">ART CRAFT</h2>
+            <h1 class="home-banner_text">ART CRAFT</h1>
             <div class="home-banner_rectangle">
                 <img class="home-banner_interface" src="<?php bloginfo( 'template_directory' ); ?>/img/interface.png"
-                     alt=""/>
+                     alt="rectangle"/>
             </div>
             <!-- close .home-banner_rectangle -->
             <!-- open .home-banner_desc -->

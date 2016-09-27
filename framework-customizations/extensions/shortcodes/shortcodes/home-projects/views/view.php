@@ -15,12 +15,12 @@
                         <?php if ( $i === 1 ): ?>
                             <!-- open .home-projects__more_diamond -->
                             <div class="home-projects__more_diamond">
-                                <img src="<?php bloginfo( 'template_directory' ); ?>/img/diamond.png" alt=""/>
+                                <img src="<?php bloginfo( 'template_directory' ); ?>/img/diamond.png" alt="diamond"/>
                             </div>
                         <?php endif; ?>
                         <!-- close .home-projects__more_line -->
                         <a href="<?php echo $promo['link']; ?>" class="home-projects__more">
-                            <img src="<?php echo $promo['image']['url']; ?>" alt=""/>
+                            <img src="<?php echo $promo['image']['url']; ?>" alt="<?php echo get_post_meta( $promo['image']['attachment_id'], '_wp_attachment_image_alt', true); ?>"/>
 							<span class="home-projects__more_hover">
 								<span class="home-projects__more_hover_box">
 									<span class="home-projects__more_type"><?php echo $promo['title']; ?></span>
@@ -46,18 +46,18 @@
                                class="home-projects__tabs_item"
                                data-modal="modal__project">
                                 <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
-                                <span class="home-projects__tabs_content">
+                                <div class="home-projects__tabs_content">
                                     <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
                                     <p><?php echo fw_get_db_post_option( get_the_ID(), 'description' ); ?>
                                         <em>&mdash;<?php echo fw_get_db_post_option( get_the_ID(), 'author' ); ?></em>
                                     </p>
-                                    <button class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
+                                    <div class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
                                         <svg>
                                             <rect x="0" y="0" fill="none" width="100%" height="100%"/>
                                         </svg>
                                         заказать
-                                    </button>
-                                </span>
+                                    </div>
+                                </div>
                             </a>
                         <?php endwhile;
                     endif;
@@ -78,18 +78,18 @@
                                class="home-projects__tabs_item"
                                data-modal="modal__project">
                                 <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
-                                <span class="home-projects__tabs_content">
+                                <div class="home-projects__tabs_content">
                                     <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
                                     <p><?php echo get_the_content( get_the_ID() ); ?>
                                         <em>&mdash;<?php echo fw_get_db_post_option( get_the_ID(), 'author' ); ?></em>
                                     </p>
-                                    <button class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
+                                    <div class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
                                         <svg>
                                             <rect x="0" y="0" fill="none" width="100%" height="100%"/>
                                         </svg>
                                         заказать
-                                    </button>
-                                </span>
+                                    </div>
+                                </div>
                             </a>
                         <?php endwhile;
                     endif;
@@ -110,18 +110,18 @@
                                class="home-projects__tabs_item"
                                data-modal="modal__project">
                                 <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
-                                <span class="home-projects__tabs_content">
+                                <div class="home-projects__tabs_content">
                                     <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
                                     <p><?php echo fw_get_db_post_option( get_the_ID(), 'description' ); ?>
                                         <em>&mdash;<?php echo fw_get_db_post_option( get_the_ID(), 'author' ); ?></em>
                                     </p>
-                                    <button class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
+                                    <div class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
                                         <svg>
                                             <rect x="0" y="0" fill="none" width="100%" height="100%"/>
                                         </svg>
                                         заказать
-                                    </button>
-                                </span>
+                                    </div>
+                                </div>
                             </a>
                         <?php endwhile;
                     endif;

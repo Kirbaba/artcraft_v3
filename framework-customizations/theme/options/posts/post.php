@@ -10,6 +10,7 @@ $options = array(
             'author'      => array(
                 'type'  => 'text',
                 'label' => __( 'Автор (приписка)', '{domain}' ),
+                'value' => 'ArtCraft',
             ),
         ),
     ),

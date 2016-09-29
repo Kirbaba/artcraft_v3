@@ -34,7 +34,9 @@
                 </div>
 
                 <div class="home-projects__tabs show_site">
-                    <?php $sites = new WP_Query( array(
+                    <?php
+
+                    $sites = new WP_Query( array(
                         'category_name'  => 'sites',
                         'posts_per_page' => 3
                     ) );
@@ -42,10 +44,10 @@
                     // Цикл
                     if ( $sites->have_posts() ) :
                         while ( $sites->have_posts() ) : $sites->the_post(); ?>
-                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>"
+                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>"
                                class="home-projects__tabs_item"
                                data-modal="modal__project">
-                                <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
+                                <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
                                 <div class="home-projects__tabs_content">
                                     <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
                                     <p><?php echo fw_get_db_post_option( get_the_ID(), 'description' ); ?>
@@ -74,10 +76,10 @@
                     // Цикл
                     if ( $sites->have_posts() ) :
                         while ( $sites->have_posts() ) : $sites->the_post(); ?>
-                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>"
+                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>"
                                class="home-projects__tabs_item"
                                data-modal="modal__project">
-                                <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
+                                <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
                                 <div class="home-projects__tabs_content">
                                     <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
                                     <p><?php echo get_the_content( get_the_ID() ); ?>
@@ -106,10 +108,10 @@
                     // Цикл
                     if ( $sites->have_posts() ) :
                         while ( $sites->have_posts() ) : $sites->the_post(); ?>
-                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>"
+                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>"
                                class="home-projects__tabs_item"
                                data-modal="modal__project">
-                                <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
+                                <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
                                 <div class="home-projects__tabs_content">
                                     <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
                                     <p><?php echo fw_get_db_post_option( get_the_ID(), 'description' ); ?>

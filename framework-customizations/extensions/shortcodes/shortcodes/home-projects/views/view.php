@@ -6,7 +6,7 @@
     <div class="intro">
         <div class="container">
             <h2>ПРОЕКТЫ</h2>
-            <h4>В данном разделе представлены только избранные проекты нашей компании за период с 2004 года.</h4>
+            <h4>В данном разделе представлены только избранные проекты нашей компании за период с 2010 года.</h4>
             <div class="home-projects__flex">
                 <!-- open .home-projects__more_line -->
                 <div class="home-projects__more_line">

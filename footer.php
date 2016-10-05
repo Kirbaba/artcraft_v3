@@ -46,7 +46,26 @@
 		
 </div>
 <!-- close .modal modal__share -->
-
+<script>if (typeof (turboRn) == "undefined") {
+		turboRn = Math.floor(Math.random() * 99999999999);
+	}
+	turboRn2 = Math.floor(Math.random() * 99999999999);
+	document.write('<div id="turbo' + turboRn2 + '"></div>');
+	var turboScript = document.createElement('script');
+	turboScript.type = 'text/javascript';
+	turboScript.async = true;
+	var protocol = (window.location.protocol != "https:")? 'http:' : 'https:';
+	turboScript.src = protocol + '//engine.turboroller.ru/Route?place=110km-4187' + '&ctx=' + escape(document.title) + '&r=' + turboRn + '&r2=' + turboRn2 + '&ct1=' + document.defaultCharset + '&ct2=' + document.characterSet;
+	if (typeof (turboScripts) == "undefined") {
+		turboScripts = [turboScript];
+		setTimeout(function () {
+			var s = document.getElementsByTagName('script')[0];
+			for (var i = 0; i < turboScripts.length; i++) s.parentNode.insertBefore(turboScripts[i], s);
+		}, 10);
+	}
+	else {
+		turboScripts.push(turboScript);
+	}</script>
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
 </body>
 </html>

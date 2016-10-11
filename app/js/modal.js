@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 		$(".modal").hide();
 	});
 
-	$(document).on("click", ".home-projects__tabs_item", function(event) {
+	/*$(document).on("click", ".home-projects__tabs_item", function(event) {
 		event.preventDefault();
 		var modal = ($(this).data('modal'));
 		$("." + modal).show(500);
@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 		$(".modal__project_image-box img").attr("src", image);
 		var content = $(this).children(".home-projects__tabs_content").html();
 		$(".modal__project_content").append('<div class="modal__project_content_wrap">' + content + '</div>').delay(2000);
-	});
+	});*/
 
 	$(document).on("click", ".modal__project_close", function(event) {
 		event.preventDefault();

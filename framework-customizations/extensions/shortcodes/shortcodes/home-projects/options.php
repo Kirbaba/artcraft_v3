@@ -11,7 +11,46 @@ $options = array(
     'subtitle' => array(
         'label' => __( 'Подзаголовок', 'unyson' ),
         'type'  => 'textarea',
-        'value' => 'В данном разделе представлены только избранные проекты нашей компании за период с 2004 года.',
+        'value' => 'В данном разделе представлены только избранные проекты нашей компании за период с 2010 года.',
+    ),
+    'design_thumbs'   => array(
+		'type'  => 'addable-option',
+		'label' => __('Миниатюры для дизайна', '{domain}'),
+		'desc'  => __('380*225 px', '{domain}'),
+		'option' => array(
+			'type' => 'upload',
+			'images_only' => true,
+			'label' => __('Изображения', '{domain}'),
+		),
+		'add-button-text' => __('добавить', '{domain}'),
+		'limit' => 3,
+		'sortable' => true,
+	),
+    'sites_thumbs'   => array(
+	    'type'  => 'addable-option',
+	    'label' => __('Миниатюры для сайтов', '{domain}'),
+	    'desc'  => __('380*225 px', '{domain}'),
+	    'option' => array(
+		    'type' => 'upload',
+		    'images_only' => true,
+		    'label' => __('Изображения', '{domain}'),
+	    ),
+	    'add-button-text' => __('добавить', '{domain}'),
+	    'limit' => 3,
+	    'sortable' => true,
+    ),
+    'smm_thumbs'   => array(
+	    'type'  => 'addable-option',
+	    'label' => __('Миниатюры для СММ', '{domain}'),
+	    'desc'  => __('380*225 px', '{domain}'),
+	    'option' => array(
+		    'type' => 'upload',
+		    'images_only' => true,
+		    'label' => __('Изображения', '{domain}'),
+	    ),
+	    'add-button-text' => __('добавить', '{domain}'),
+	    'limit' => 3,
+	    'sortable' => true,
     ),
     'promos'   => array(
         'type'            => 'addable-box',

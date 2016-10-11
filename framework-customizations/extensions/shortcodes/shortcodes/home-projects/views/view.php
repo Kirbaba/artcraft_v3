@@ -2,11 +2,11 @@
     die( 'Forbidden' );
 } ?>
 
-<div class="section home-projects" id="moveto_projects">
+<div class="section home-projects" id="portfolio">
     <div class="intro">
         <div class="container">
-            <h2>ПРОЕКТЫ</h2>
-            <h4>В данном разделе представлены только избранные проекты нашей компании за период с 2010 года.</h4>
+            <h2><?php echo $atts['title']; ?></h2>
+            <h4><?php echo $atts['subtitle']; ?></h4>
             <div class="home-projects__flex">
                 <!-- open .home-projects__more_line -->
                 <div class="home-projects__more_line">
@@ -34,102 +34,40 @@
                 </div>
 
                 <div class="home-projects__tabs show_site">
-                    <?php
-
-                    $sites = new WP_Query( array(
-                        'category_name'  => 'sites',
-                        'posts_per_page' => 3
-                    ) );
-
-                    // Цикл
-                    if ( $sites->have_posts() ) :
-                        while ( $sites->have_posts() ) : $sites->the_post(); ?>
-                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>"
-                               class="home-projects__tabs_item"
-                               data-modal="modal__project">
-                                <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
-                                <div class="home-projects__tabs_content">
-                                    <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
-                                    <p><?php echo fw_get_db_post_option( get_the_ID(), 'description' ); ?>
-                                        <em>&mdash;<?php echo fw_get_db_post_option( get_the_ID(), 'author' ); ?></em>
-                                    </p>
-                                    <div class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
-                                        </svg>
-                                        заказать
-                                    </div>
-                                </div>
+                    <?php $sites = $atts['sites_thumbs'];
+                    if ( !empty($sites) ) :
+                        foreach($sites as $site) :  ?>
+                            <a href="/category/sites" class="home-projects__tabs_item">
+                                <?php if(isset($site['url'])): ?>
+                                    <img src="<?php echo $site['url']; ?>" alt="">
+                                <?php endif; ?>
                             </a>
-                        <?php endwhile;
-                    endif;
-                    /* Возвращаем оригинальные данные поста. Сбрасываем $post. */
-                    wp_reset_postdata();
-                    ?>
+                        <?php endforeach;
+                    endif; ?>
                 </div>
                 <div class="home-projects__tabs show_design">
-                    <?php $sites = new WP_Query( array(
-                        'category_name'  => 'design',
-                        'posts_per_page' => 3
-                    ) );
-
-                    // Цикл
-                    if ( $sites->have_posts() ) :
-                        while ( $sites->have_posts() ) : $sites->the_post(); ?>
-                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>"
-                               class="home-projects__tabs_item"
-                               data-modal="modal__project">
-                                <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
-                                <div class="home-projects__tabs_content">
-                                    <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
-                                    <p><?php echo get_the_content( get_the_ID() ); ?>
-                                        <em>&mdash;<?php echo fw_get_db_post_option( get_the_ID(), 'author' ); ?></em>
-                                    </p>
-                                    <div class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
-                                        </svg>
-                                        заказать
-                                    </div>
-                                </div>
-                            </a>
-                        <?php endwhile;
-                    endif;
-                    /* Возвращаем оригинальные данные поста. Сбрасываем $post. */
-                    wp_reset_postdata();
-                    ?>
+	                <?php $designs = $atts['design_thumbs'];
+	                if ( !empty($designs) ) :
+		                foreach($designs as $design) :  ?>
+			                <a href="/category/design" class="home-projects__tabs_item">
+				                <?php if(isset($design['url'])): ?>
+					                <img src="<?php echo $design['url']; ?>" alt="">
+				                <?php endif; ?>
+			                </a>
+		                <?php endforeach;
+	                endif; ?>
                 </div>
                 <div class="home-projects__tabs show_smm">
-                    <?php $sites = new WP_Query( array(
-                        'category_name'  => 'smm',
-                        'posts_per_page' => 3
-                    ) );
-
-                    // Цикл
-                    if ( $sites->have_posts() ) :
-                        while ( $sites->have_posts() ) : $sites->the_post(); ?>
-                            <a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>"
-                               class="home-projects__tabs_item"
-                               data-modal="modal__project">
-                                <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
-                                <div class="home-projects__tabs_content">
-                                    <h3><?php echo get_the_title( get_the_ID() ); ?></h3>
-                                    <p><?php echo fw_get_db_post_option( get_the_ID(), 'description' ); ?>
-                                        <em>&mdash;<?php echo fw_get_db_post_option( get_the_ID(), 'author' ); ?></em>
-                                    </p>
-                                    <div class="portfolio_btn btn-1 js_get-modal" data-modal="modal__share">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
-                                        </svg>
-                                        заказать
-                                    </div>
-                                </div>
-                            </a>
-                        <?php endwhile;
-                    endif;
-                    /* Возвращаем оригинальные данные поста. Сбрасываем $post. */
-                    wp_reset_postdata();
-                    ?>
+	                <?php $smm = $atts['smm_thumbs'];
+	                if ( !empty($smm) ) :
+		                foreach($smm as $sm) :  ?>
+			                <a href="/category/smm" class="home-projects__tabs_item">
+				                <?php if(isset($sm['url'])): ?>
+					                <img src="<?php echo $sm['url']; ?>" alt="">
+				                <?php endif; ?>
+			                </a>
+		                <?php endforeach;
+	                endif; ?>
                 </div>
 
                 <nav class="home-projects__nav">

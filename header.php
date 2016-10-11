@@ -98,9 +98,9 @@
 			<!-- close .navigation__menu_toggle -->
 			<!-- close .navigation__logo -->
 			<ul class="navigation__menu">
-				<li><a href="/" id="moveToTop">Главная</a></li>
-				<li><a data-scroll href="#moveto_projects">Проекты</a></li>
-				<li><a data-scroll href="#moveto_about">Акции</a></li>
+				<li><a href="/" id="#index">Главная</a></li>
+				<li><a data-scroll href="#portfolio">Проекты</a></li>
+				<li><a data-scroll href="#promotions">Акции</a></li>
 			</ul>
 
 			<!-- open .navigation__lang -->

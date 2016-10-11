@@ -3,7 +3,7 @@
 } ?>
 
 <!-- open .particles -->
-<section class="home-partners" id="moveto_about">
+<section class="home-partners" id="promotions">
         <!-- open .container -->
         <div class="container">
             <h2><?php echo $atts['title']; ?></h2>

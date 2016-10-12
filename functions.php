@@ -146,3 +146,22 @@ function sendMailForm() {
     wp_die();
 }
 
+// AJAX ACTION
+add_action( 'wp_ajax_orderform', 'sendOrderForm' );
+add_action( 'wp_ajax_nopriv_orderform', 'sendOrderForm' );
+
+function sendOrderForm() {
+	if ( $_POST ) {
+
+		$adminMail = get_option( 'admin_email' );
+
+		$str = "С вашего сайта оставили заявку:<br>";
+		$str .= 'Имя: ' . $_POST["name"] . ' <br>';
+		$str .= 'Телефон: ' . $_POST["phone"] . ' <br>';
+		$str .= 'Почта: ' . $_POST["email"] . ' <br>';
+		$str .= 'Сообщение: ' . $_POST["msg"] . ' <br>';
+
+		wp_mail( $adminMail, "SURPRIZE MOTHERF*CKER", $str, "Content-type: text/html; charset=UTF-8\r\n" );
+	}
+	wp_die();
+}

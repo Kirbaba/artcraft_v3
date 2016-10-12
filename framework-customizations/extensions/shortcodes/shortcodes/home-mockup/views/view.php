@@ -15,7 +15,7 @@ $bg_image = $atts['bg_image']['url'];
             <div class="home-order__box">
                 <h2><?php echo $atts['title']; ?></h2>
                 <a href="#" class="home-order_btn js_get-modal"
-                   data-modal="modal__share"><span><?php echo $atts['link_title']; ?></span></a>
+                   data-modal="modal__order"><span><?php echo $atts['link_title']; ?></span></a>
                 <small><?php echo $atts['description']; ?></small>
             </div>
             <!-- close .home-order__box -->

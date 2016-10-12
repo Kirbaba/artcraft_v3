@@ -24,7 +24,7 @@
                                         <p><?php echo $step['desc']; ?></p>
                                     </div>
                                     <a href="#" class="home-steps__item_description_btn js_get-modal"
-                                       data-modal="modal__share"><span>Оформить заказ</span></a>
+                                       data-modal="modal__order"><span>Оформить заказ</span></a>
                                 </div>
                                 <!-- close .flexw -->
 
